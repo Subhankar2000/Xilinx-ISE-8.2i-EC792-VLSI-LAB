@@ -1,0 +1,4 @@
+EN e5_1_or NULL D:/Xilinx_projects/A11-LAB/E5_1_OR/E5_1_OR.vhd sub00/vhpl00 1608654958
+AR tb testbench_arch D:/Xilinx_projects/A11-LAB/E5_1_OR/tb.vhw sub00/vhpl03 1608659241
+EN tb NULL D:/Xilinx_projects/A11-LAB/E5_1_OR/tb.vhw sub00/vhpl02 1608659240
+AR e5_1_or behavioral D:/Xilinx_projects/A11-LAB/E5_1_OR/E5_1_OR.vhd sub00/vhpl01 1608654959

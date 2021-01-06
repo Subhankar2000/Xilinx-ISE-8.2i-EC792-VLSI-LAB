@@ -1,0 +1,4 @@
+EN exp5_1_and NULL D:/Xilinx_projects/AA/exp5_1_AND/exp5_1_AND.vhd sub00/vhpl00 1608660176
+EN tb NULL D:/Xilinx_projects/AA/exp5_1_AND/tb.vhw sub00/vhpl02 1608660201
+AR tb testbench_arch D:/Xilinx_projects/AA/exp5_1_AND/tb.vhw sub00/vhpl03 1608660202
+AR exp5_1_and behavioral D:/Xilinx_projects/AA/exp5_1_AND/exp5_1_AND.vhd sub00/vhpl01 1608660177

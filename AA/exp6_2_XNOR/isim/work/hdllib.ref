@@ -1,0 +1,4 @@
+EN exp6_2_xnor NULL D:/Xilinx_projects/AA/exp6_2_XNOR/exp6_2_XNOR.vhd sub00/vhpl00 1608660690
+AR exp6_2_xnor behavioral D:/Xilinx_projects/AA/exp6_2_XNOR/exp6_2_XNOR.vhd sub00/vhpl01 1608660691
+AR tb testbench_arch D:/Xilinx_projects/AA/exp6_2_XNOR/tb.vhw sub00/vhpl03 1608660693
+EN tb NULL D:/Xilinx_projects/AA/exp6_2_XNOR/tb.vhw sub00/vhpl02 1608660692

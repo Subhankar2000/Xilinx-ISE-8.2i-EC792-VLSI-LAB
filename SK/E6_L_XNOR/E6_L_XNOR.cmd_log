@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/SK/E6_L_XNOR/E6_L_XNOR.ise" -intstyle ise -ifn E6_L_XNOR.xst -ofn E6_L_XNOR.syr

@@ -1,0 +1,3 @@
+xst -ise "D:/Xilinx_projects/AA/exp6_2_XNOR/exp6_2_XNOR.ise" -intstyle ise -ifn exp6_2_XNOR.xst -ofn exp6_2_XNOR.syr
+xst -ise "D:/Xilinx_projects/AA/exp6_2_XNOR/exp6_2_XNOR.ise" -intstyle ise -ifn exp6_2_XNOR.xst -ofn exp6_2_XNOR.syr
+xst -ise "D:/Xilinx_projects/AA/exp6_2_XNOR/exp6_2_XNOR.ise" -intstyle ise -ifn exp6_2_XNOR.xst -ofn exp6_2_XNOR.syr

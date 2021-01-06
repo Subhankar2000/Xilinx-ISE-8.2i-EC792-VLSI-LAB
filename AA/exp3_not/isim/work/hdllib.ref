@@ -1,0 +1,4 @@
+AR exp3_not behavioral D:/Xilinx/AA/exp3_not/exp3_not.vhd sub00/vhpl01 1608659876
+AR tb testbench_arch D:/Xilinx/AA/exp3_not/tb.vhw sub00/vhpl03 1608659878
+EN tb NULL D:/Xilinx/AA/exp3_not/tb.vhw sub00/vhpl02 1608659877
+EN exp3_not NULL D:/Xilinx/AA/exp3_not/exp3_not.vhd sub00/vhpl00 1608659875

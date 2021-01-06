@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx/AA/exp3_not/exp3_not.ise" -intstyle ise -ifn exp3_not.xst -ofn exp3_not.syr

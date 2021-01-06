@@ -1,0 +1,4 @@
+AR e3_not behavioral D:/Xilinx_projects/A11-LAB/E3_NOT/E3_NOT.vhd sub00/vhpl01 1608654780
+AR tb testbench_arch D:/Xilinx_projects/A11-LAB/E3_NOT/tb.vhw sub00/vhpl03 1608654782
+EN tb NULL D:/Xilinx_projects/A11-LAB/E3_NOT/tb.vhw sub00/vhpl02 1608654781
+EN e3_not NULL D:/Xilinx_projects/A11-LAB/E3_NOT/E3_NOT.vhd sub00/vhpl00 1608654779

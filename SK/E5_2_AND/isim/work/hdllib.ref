@@ -1,0 +1,4 @@
+AR e5_2_and behavioral D:/Xilinx_projects/SK/E5_2_AND/E5_2_AND.vhd sub00/vhpl01 1608792357
+EN e5_2_and NULL D:/Xilinx_projects/SK/E5_2_AND/E5_2_AND.vhd sub00/vhpl00 1608792356
+EN tb NULL D:/Xilinx_projects/SK/E5_2_AND/tb.vhw sub00/vhpl02 1608792358
+AR tb testbench_arch D:/Xilinx_projects/SK/E5_2_AND/tb.vhw sub00/vhpl03 1608792359

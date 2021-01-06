@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/A11-LAB/E5_2_AND/E5_2_AND.ise" -intstyle ise -ifn E5_2_AND.xst -ofn E5_2_AND.syr

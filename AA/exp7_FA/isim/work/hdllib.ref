@@ -1,0 +1,4 @@
+AR exp7_fa behavioral D:/Xilinx_projects/AA/exp7_FA/exp7_FA.vhd sub00/vhpl01 1608721251
+EN tb NULL D:/Xilinx_projects/AA/exp7_FA/tb.vhw sub00/vhpl02 1608721322
+AR tb testbench_arch D:/Xilinx_projects/AA/exp7_FA/tb.vhw sub00/vhpl03 1608721323
+EN exp7_fa NULL D:/Xilinx_projects/AA/exp7_FA/exp7_FA.vhd sub00/vhpl00 1608721250

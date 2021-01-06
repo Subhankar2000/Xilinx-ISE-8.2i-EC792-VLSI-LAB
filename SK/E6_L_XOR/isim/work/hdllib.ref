@@ -1,0 +1,4 @@
+EN e6_l_xor NULL D:/Xilinx_projects/SK/E6_L_XOR/E6_L_XOR.vhd sub00/vhpl00 1609948087
+AR tb testbench_arch D:/Xilinx_projects/SK/E6_L_XOR/tb.vhw sub00/vhpl03 1609948150
+EN tb NULL D:/Xilinx_projects/SK/E6_L_XOR/tb.vhw sub00/vhpl02 1609948149
+AR e6_l_xor behavioral D:/Xilinx_projects/SK/E6_L_XOR/E6_L_XOR.vhd sub00/vhpl01 1609948088

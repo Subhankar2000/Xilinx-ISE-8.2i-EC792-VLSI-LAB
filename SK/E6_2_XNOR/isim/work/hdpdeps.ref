@@ -1,0 +1,14 @@
+V3 7
+FL D:/Xilinx_projects/SK/E6_2_XNOR/E6_2_XNOR.vhd 2021/01/06.21:20:58 I.31
+EN work/E6_2_XNOR 1609948286       FL D:/Xilinx_projects/SK/E6_2_XNOR/E6_2_XNOR.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/E6_2_XNOR/Behavioral 1609948287 FL D:/Xilinx_projects/SK/E6_2_XNOR/E6_2_XNOR.vhd \
+      EN work/E6_2_XNOR 1609948286
+FL D:/Xilinx_projects/SK/E6_2_XNOR/tb.vhw 2021/01/06.21:21:19 I.31
+EN work/tb 1609948288              FL D:/Xilinx_projects/SK/E6_2_XNOR/tb.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/tb/testbench_arch 1609948289 FL D:/Xilinx_projects/SK/E6_2_XNOR/tb.vhw EN work/tb 1609948288 \
+      CP E6_2_XNOR      PB ieee/STD_LOGIC_TEXTIO 1147840859

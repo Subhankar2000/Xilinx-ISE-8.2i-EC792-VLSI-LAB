@@ -1,0 +1,7 @@
+V3 3
+FL D:/Xilinx_projects/SK/E6_L_XNOR/E6_L_XNOR.vhd 2021/01/06.21:22:16 I.31
+EN work/E6_L_XNOR 1609948361       FL D:/Xilinx_projects/SK/E6_L_XNOR/E6_L_XNOR.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814
+AR work/E6_L_XNOR/Behavioral 1609948362 FL D:/Xilinx_projects/SK/E6_L_XNOR/E6_L_XNOR.vhd \
+      EN work/E6_L_XNOR 1609948361

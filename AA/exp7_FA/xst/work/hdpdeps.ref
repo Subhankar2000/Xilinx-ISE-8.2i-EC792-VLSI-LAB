@@ -1,0 +1,7 @@
+V3 3
+FL D:/Xilinx_projects/AA/exp7_FA/exp7_FA.vhd 2020/12/23.16:26:21 I.31
+EN work/exp7_FA 1608782826         FL D:/Xilinx_projects/AA/exp7_FA/exp7_FA.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814
+AR work/exp7_FA/Behavioral 1608782827 FL D:/Xilinx_projects/AA/exp7_FA/exp7_FA.vhd \
+      EN work/exp7_FA 1608782826

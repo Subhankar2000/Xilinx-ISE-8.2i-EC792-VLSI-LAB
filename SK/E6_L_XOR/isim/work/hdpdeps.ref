@@ -1,0 +1,14 @@
+V3 7
+FL D:/Xilinx_projects/SK/E6_L_XOR/tb.vhw 2021/01/06.21:19:05 I.31
+EN work/tb 1609948149              FL D:/Xilinx_projects/SK/E6_L_XOR/tb.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/tb/testbench_arch 1609948150 FL D:/Xilinx_projects/SK/E6_L_XOR/tb.vhw EN work/tb 1609948149 \
+      CP E6_L_XOR       PB ieee/STD_LOGIC_TEXTIO 1147840859
+FL D:/Xilinx_projects/SK/E6_L_XOR/E6_L_XOR.vhd 2021/01/06.21:17:15 I.31
+EN work/E6_L_XOR 1609948087        FL D:/Xilinx_projects/SK/E6_L_XOR/E6_L_XOR.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/E6_L_XOR/Behavioral 1609948088 FL D:/Xilinx_projects/SK/E6_L_XOR/E6_L_XOR.vhd \
+      EN work/E6_L_XOR 1609948087

@@ -1,0 +1,3 @@
+xst -ise "D:/Xilinx_projects/A11-LAB/E3_NOT/E3_NOT.ise" -intstyle ise -ifn E3_NOT.xst -ofn E3_NOT.syr
+xst -ise "D:/Xilinx_projects/A11-LAB/E3_NOT/E3_NOT.ise" -intstyle ise -ifn E3_NOT.xst -ofn E3_NOT.syr
+xst -ise "D:/Xilinx_projects/A11-LAB/E3_NOT/E3_NOT.ise" -intstyle ise -ifn E3_NOT.xst -ofn E3_NOT.syr

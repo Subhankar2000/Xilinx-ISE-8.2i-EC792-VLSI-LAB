@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/SK/E6_1_XOR/E6_1_XOR.ise" -intstyle ise -ifn E6_1_XOR.xst -ofn E6_1_XOR.syr

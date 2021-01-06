@@ -1,0 +1,3 @@
+xst -ise "D:/Xilinx_projects/AA/exp5_2_OR/exp5_2_OR.ise" -intstyle ise -ifn exp5_2_OR.xst -ofn exp5_2_OR.syr
+xst -ise "D:/Xilinx_projects/AA/exp5_2_OR/exp5_2_OR.ise" -intstyle ise -ifn exp5_2_OR.xst -ofn exp5_2_OR.syr
+ngdbuild -ise "D:/Xilinx_projects/AA/exp5_2_OR/exp5_2_OR.ise" -intstyle ise -dd _ngo -i -p acr2 "exp5_2_OR.ngc" exp5_2_OR.ngd

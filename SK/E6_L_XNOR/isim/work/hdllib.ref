@@ -1,0 +1,4 @@
+AR e6_l_xnor behavioral D:/Xilinx_projects/SK/E6_L_XNOR/E6_L_XNOR.vhd sub00/vhpl01 1609948415
+AR tb testbench_arch D:/Xilinx_projects/SK/E6_L_XNOR/tb.vhw sub00/vhpl03 1609948417
+EN tb NULL D:/Xilinx_projects/SK/E6_L_XNOR/tb.vhw sub00/vhpl02 1609948416
+EN e6_l_xnor NULL D:/Xilinx_projects/SK/E6_L_XNOR/E6_L_XNOR.vhd sub00/vhpl00 1609948414

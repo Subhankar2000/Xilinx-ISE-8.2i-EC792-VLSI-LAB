@@ -1,0 +1,4 @@
+AR xnorg behavioral D:/Xilinx_projects/AA/XNORg/XNORg.vhd sub00/vhpl01 1608662666
+AR tb testbench_arch D:/Xilinx_projects/AA/XNORg/tb.vhw sub00/vhpl03 1608662668
+EN tb NULL D:/Xilinx_projects/AA/XNORg/tb.vhw sub00/vhpl02 1608662667
+EN xnorg NULL D:/Xilinx_projects/AA/XNORg/XNORg.vhd sub00/vhpl00 1608662665
