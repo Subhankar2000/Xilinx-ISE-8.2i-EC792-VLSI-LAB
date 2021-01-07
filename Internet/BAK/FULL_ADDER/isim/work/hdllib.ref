@@ -1,0 +1,4 @@
+AR full_add behavioral D:/Internet/FULL_ADDER/full_add.vhd sub00/vhpl01 1607512139
+EN full_add_sim NULL D:/Internet/FULL_ADDER/full_add_sim.vhw sub00/vhpl02 1607519909
+AR full_add_sim testbench_arch D:/Internet/FULL_ADDER/full_add_sim.vhw sub00/vhpl03 1607519910
+EN full_add NULL D:/Internet/FULL_ADDER/full_add.vhd sub00/vhpl00 1607512138

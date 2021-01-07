@@ -1,0 +1,59 @@
+--------------------------------------------------------------------------------
+Release 8.2i Trace 
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\bin\nt\trce.exe -ise D:/Xilinx_projects/Internet/GATES/GATES.ise
+-intstyle ise -e 3 -l 3 -s 4 -xml gates gates.ncd -o gates.twr gates.pcf
+
+Design file:              gates.ncd
+Physical constraint file: gates.pcf
+Device,speed:             xc3s400,-4 (PRODUCTION 1.38 2006-05-03)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A              |AND1           |    8.461|
+A              |NAND1          |    7.985|
+A              |NOR1           |    8.658|
+A              |NOT1           |    6.645|
+A              |OR1            |    8.549|
+A              |XNOR1          |    8.635|
+A              |XOR1           |    9.044|
+B              |AND1           |    8.422|
+B              |NAND1          |    7.964|
+B              |NOR1           |    8.637|
+B              |OR1            |    8.552|
+B              |XNOR1          |    8.523|
+B              |XOR1           |    8.932|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Dec 12 22:02:45 2020
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 176 MB
+
+
+

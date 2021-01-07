@@ -1,0 +1,14 @@
+V3 7
+FL D:/Internet/FULL_ADDER/full_add.vhd 2020/12/09.16:35:35 I.31
+EN work/full_add 1607512138        FL D:/Internet/FULL_ADDER/full_add.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/full_add/Behavioral 1607512139 FL D:/Internet/FULL_ADDER/full_add.vhd \
+      EN work/full_add 1607512138
+FL D:/Internet/FULL_ADDER/full_add_sim.vhw 2020/12/09.18:48:20 I.31
+EN work/full_add_sim 1607519909    FL D:/Internet/FULL_ADDER/full_add_sim.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/full_add_sim/testbench_arch 1607519910 FL D:/Internet/FULL_ADDER/full_add_sim.vhw \
+      EN work/full_add_sim 1607519909 CP full_add PB ieee/STD_LOGIC_TEXTIO 1147840859

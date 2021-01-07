@@ -1,0 +1,29 @@
+ command line:
+   ./full_add_sim_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  53556
+
+Wed Dec 23 16:04:38 2020
+
+Total Line Count = 94
+
+ Elaboration time 0 sec.
+
+ Estimate current memory usage 113.619 Meg. 
+
+ Total signals 33
+ Total nets 16
+ Total signal drivers 11
+ Total blocks 10
+ Total primitive blocks 8
+ Total processes 15
+ntrace select -o on -n /full_add_sim/Ain 
+ntrace select -o on -n /full_add_sim/Bin 
+ntrace select -o on -n /full_add_sim/Cin 
+ntrace select -o on -n /full_add_sim/SUM 
+ntrace select -o on -n /full_add_sim/CARRY 
+ntrace start 
+run all 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

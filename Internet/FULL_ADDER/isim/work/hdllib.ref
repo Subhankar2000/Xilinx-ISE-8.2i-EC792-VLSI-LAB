@@ -1,0 +1,5 @@
+AR full_add behavioral D:/Internet/FULL_ADDER/full_add.vhd sub00/vhpl01 1607512139
+MO full_add_sim NULL D:\Xilinx_projects\Internet\FULL_ADDER/full_add_sim.tfw vlg6F/full__add__sim.bin 1607689806
+AR full_add_sim testbench_arch D:/Internet/FULL_ADDER/full_add_sim.vhw sub00/vhpl03 1607519910
+MO full_add NULL D:\Xilinx_projects\Internet\FULL_ADDER/full_add.vf vlg47/full__add.bin 1607689805
+MO glbl NULL D:/Xilinx/verilog/src/glbl.v vlg2D/glbl.bin 1607689807

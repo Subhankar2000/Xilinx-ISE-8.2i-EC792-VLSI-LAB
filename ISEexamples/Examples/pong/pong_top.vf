@@ -1,0 +1,118 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : pong_top.vf
+// /___/   /\     Timestamp : 05/16/2006 07:28:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\xilinx82\bin\nt\sch2verilog.exe -intstyle ise -family spartan3 -w C:/examples/pong/pong_top.sch pong_top.vf
+//Design Name: pong_top
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module pong_top(btn3, 
+                clk_ic4, 
+                ps2c, 
+                ps2d, 
+                an, 
+                ld, 
+                seg_a, 
+                seg_b, 
+                seg_c, 
+                seg_d, 
+                seg_dp, 
+                seg_e, 
+                seg_f, 
+                seg_g, 
+                vga_blue, 
+                vga_green, 
+                vga_hs, 
+                vga_red, 
+                vga_vs);
+
+    input btn3;
+   // synthesis attribute LOC of btn3 is "l14"
+    input clk_ic4;
+   // synthesis attribute LOC of clk_ic4 is "t9"
+    input ps2c;
+   // synthesis attribute LOC of ps2c is "m16"
+    input ps2d;
+   // synthesis attribute LOC of ps2d is "m15"
+   output [3:0] an;
+   // synthesis attribute LOC of an is "e13,f14,g14,d14"
+   output [7:0] ld;
+   // synthesis attribute LOC of ld is "p11,p12,n12,p13,n14,l12,p14,k12"
+   output seg_a;
+   // synthesis attribute LOC of seg_a is "e14"
+   output seg_b;
+   // synthesis attribute LOC of seg_b is "g13"
+   output seg_c;
+   // synthesis attribute LOC of seg_c is "n15"
+   output seg_d;
+   // synthesis attribute LOC of seg_d is "p15"
+   output seg_dp;
+   // synthesis attribute LOC of seg_dp is "p16"
+   output seg_e;
+   // synthesis attribute LOC of seg_e is "r16"
+   output seg_f;
+   // synthesis attribute LOC of seg_f is "f13"
+   output seg_g;
+   // synthesis attribute LOC of seg_g is "n16"
+   output vga_blue;
+   // synthesis attribute LOC of vga_blue is "r11"
+   output vga_green;
+   // synthesis attribute LOC of vga_green is "t12"
+   output vga_hs;
+   // synthesis attribute LOC of vga_hs is "r9"
+   output vga_red;
+   // synthesis attribute LOC of vga_red is "r12"
+   output vga_vs;
+   // synthesis attribute LOC of vga_vs is "t10"
+   
+   wire hsync;
+   wire [1:0] lf_dir;
+   wire [1:0] rt_dir;
+   wire serve;
+   wire vsync;
+   wire [1:0] XLXN_31;
+   
+   cntrl cntrl_inst (.CLK(clk_ic4), 
+                     .left_dir(lf_dir[1:0]), 
+                     .RESET(btn3), 
+                     .right_dir(rt_dir[1:0]), 
+                     .SERVE(serve), 
+                     .COLOR(XLXN_31[1:0]), 
+                     .HSYNCH(hsync), 
+                     .VSYNCH(vsync));
+   read_ps2 read_ps2_inst (.Clk(clk_ic4), 
+                           .PS2_Clk(ps2c), 
+                           .PS2_Data(ps2d), 
+                           .Reset(btn3), 
+                           .left_dir(lf_dir[1:0]), 
+                           .ps2_code(ld[7:0]), 
+                           .right_dir(rt_dir[1:0]), 
+                           .serve(serve));
+   game_title title_inst (.clk(clk_ic4), 
+                          .an(an[3:0]), 
+                          .seven_seg({seg_a, seg_b, seg_c, seg_d, seg_e, seg_f, 
+         seg_g, seg_dp}));
+   vga_int vga_inst (.CLK(clk_ic4), 
+                     .COLOR(XLXN_31[1:0]), 
+                     .HSYNCH_IN(hsync), 
+                     .VSYNCH_IN(vsync), 
+                     .BLUE(vga_blue), 
+                     .GREEN(vga_green), 
+                     .HSYNCH_OUT(vga_hs), 
+                     .RED(vga_red), 
+                     .VSYNCH_OUT(vga_vs));
+endmodule

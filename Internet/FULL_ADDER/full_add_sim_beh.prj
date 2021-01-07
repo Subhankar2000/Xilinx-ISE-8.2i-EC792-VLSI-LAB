@@ -1,0 +1,3 @@
+verilog work "full_add.vf"
+verilog work "full_add_sim.tfw"
+verilog work "D:/Xilinx/verilog/src/glbl.v"

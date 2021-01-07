@@ -1,0 +1,155 @@
+StateCAD ver 0 0 0 0 0 0 0 0 0 0 1281 0 0 0 Copyright 1992-2001 Xilinx, Inc.All rights reserved.
+header descri 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+font type 0 0 0 0 0 0 0 0 0 0 10 0 400 34 Arial
+else implicit 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+symbolic on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+output vhdl 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ctype int 0 0 0 0 0 0 0 0 0 0 0 0 0 0 bits
+vtype std 0 0 0 0 0 0 0 0 0 0 0 0 0 0 std_logicstd_logic_vector
+vtarget xilinx 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+vetarget synopsis 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+milib save 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ahlib save 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+tname off 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ext set 0 0 0 0 0 0 0 0 0 0 0 0 0 0 vvhd
+tuser save 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+pnum off 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+fuser save 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+alib save 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+clib save 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+vlib save 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+velib save 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+auto_sv on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+cmain on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+cdebug on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+diovhdl off 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+dioextern off 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+minimize none 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+vectorio on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+hidesv on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+pipeline none 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+clkcnt on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+optio off 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+autodel on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+header title 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+header clock 0 0 0 0 0 0 0 0 0 0 5 7 1 0 CLK
+header device 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+fitter on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+check for 0 0 0 0 0 0 0 0 0 0 142 0 0 0 
+variable add 0 0 0 0 0 0 0 0 0 0 4 7 1 0 clear
+variable oe 0 0 0 0 0 0 0 0 0 0 0 0 0 0 clear
+variable add 0 0 0 0 0 0 0 0 0 0 2 7 3 0 clken
+variable oe 0 0 0 0 0 0 0 0 0 0 16 0 0 0 clken
+variable add 0 0 0 0 0 0 0 0 0 0 4 7 1 0 counting
+variable oe 0 0 0 0 0 0 0 0 0 0 0 0 0 0 counting
+variable add 0 0 0 0 0 0 0 0 0 0 1 7 1 0 DCM_lock
+variable oe 0 0 0 0 0 0 0 0 0 0 0 0 0 0 DCM_lock
+variable add 0 0 0 0 0 0 0 0 0 0 1 7 1 0 reset
+variable oe 0 0 0 0 0 0 0 0 0 0 0 0 0 0 reset
+variable add 0 0 0 0 0 0 0 0 0 0 2 7 3 0 rst
+variable oe 0 0 0 0 0 0 0 0 0 0 16 0 0 0 rst
+variable add 0 0 0 0 0 0 0 0 0 0 4 7 1 0 start
+variable oe 0 0 0 0 0 0 0 0 0 0 0 0 0 0 start
+variable add 0 0 0 0 0 0 0 0 0 0 4 7 1 0 stop
+variable oe 0 0 0 0 0 0 0 0 0 0 0 0 0 0 stop
+variable add 0 0 0 0 0 0 0 0 0 0 4 7 1 0 stopped
+variable oe 0 0 0 0 0 0 0 0 0 0 0 0 0 0 stopped
+variable add 0 0 0 0 0 0 0 0 0 0 1 7 1 0 strtstop
+variable oe 0 0 0 0 0 0 0 0 0 0 0 0 0 0 strtstop
+variable add 0 0 0 0 0 0 0 0 0 0 3 7 1 0 SV0
+variable oe 0 0 0 0 0 0 0 0 0 0 16 0 0 0 SV0
+variable add 0 0 0 0 0 0 0 0 0 0 3 7 1 0 SV1
+variable oe 0 0 0 0 0 0 0 0 0 0 16 0 0 0 SV1
+variable add 0 0 0 0 0 0 0 0 0 0 3 7 1 0 SV2
+variable oe 0 0 0 0 0 0 0 0 0 0 16 0 0 0 SV2
+variable add 0 0 0 0 0 0 0 0 0 0 4 7 1 0 zero
+variable oe 0 0 0 0 0 0 0 0 0 0 0 0 0 0 zero
+state add 1250 -1333 1600 -1600 1250 -1600 1600 -1700 13 1 0 224 0 0 clearrst = '1';
+clken = '0';
+state add 2153 -2328 2478 -2701 2153 -2701 2478 -2701 13 2 0 224 0 0 countingclken<='1';
+rst<='0';
+state add 2153 -1762 2478 -2135 2153 -2135 2478 -2135 13 3 0 224 0 0 startclken<='1';
+rst<='0';
+state add 2123 -2840 2448 -3213 2123 -3213 2448 -3213 13 4 0 224 0 0 stopclken<='0';
+rst<='0';
+state add 1747 -3242 2072 -3615 1747 -3615 2072 -3615 13 5 0 224 0 0 stoppedclken<='0';
+rst<='0';
+state add 1842 -1153 2167 -1526 1842 -1526 2167 -1526 13 6 0 224 0 0 zeroclken<='0';
+rst<='0';
+state add 1106 -1690 1130 -1715 1106 -1715 1130 -1715 14 7 0 0 0 16 @default transition
+state select 0 0 0 0 0 0 0 0 0 6 0 0 0 0 
+state attribute 0 0 0 0 0 0 0 0 0 0 0 0 0 0 sreg
+state select 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+transition add 0 0 0 0 0 0 0 0 0 6 0 0 0 0 
+graphic add 1584 -1441 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1670 -1418 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1757 -1395 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1844 -1373 0 0 0 0 0 0 0 0 0 0 0 0 
+state select 0 0 0 0 0 0 0 0 0 2 0 0 0 0 
+transition add 1698 -2484 2014 -2575 1698 -2575 2014 -2591 0 2 0 0 0 0 strtstop = '0'
+graphic add 2154 -2541 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1987 -2678 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1987 -2346 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2155 -2484 0 0 0 0 0 0 0 0 0 0 0 0 
+transition add 2350 -2700 2654 -2791 2350 -2791 2654 -2807 0 4 0 0 0 0 strtstop ='1'
+graphic add 2356 -2695 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2334 -2741 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2311 -2790 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2288 -2840 0 0 0 0 0 0 0 0 0 0 0 0 
+state select 0 0 0 0 0 0 0 0 0 3 0 0 0 0 
+transition add 1700 -1950 2016 -2041 1700 -2041 2016 -2057 0 3 0 0 0 0 strtstop = '1'
+graphic add 2154 -1975 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1987 -2112 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1987 -1780 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2155 -1918 0 0 0 0 0 0 0 0 0 0 0 0 
+transition add 2234 -2115 2550 -2206 2234 -2206 2550 -2222 0 2 0 0 0 0 strtstop = '0'
+graphic add 2343 -2132 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2343 -2198 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2343 -2264 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2342 -2330 0 0 0 0 0 0 0 0 0 0 0 0 
+state select 0 0 0 0 0 0 0 0 0 4 0 0 0 0 
+transition add 1700 -2900 2016 -2991 1700 -2991 2016 -3007 0 4 0 0 0 0 strtstop = '1'
+graphic add 2124 -3053 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1957 -3190 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1957 -2858 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2125 -2996 0 0 0 0 0 0 0 0 0 0 0 0 
+transition add 1800 -3100 2116 -3191 1800 -3191 2116 -3207 0 5 0 0 0 0 strtstop = '0'
+graphic add 2146 -3124 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2113 -3190 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2079 -3258 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2045 -3326 0 0 0 0 0 0 0 0 0 0 0 0 
+state select 0 0 0 0 0 0 0 0 0 5 0 0 0 0 
+transition add 1700 -3800 2016 -3891 1700 -3891 2016 -3907 0 5 0 0 0 0 strtstop = '0'
+graphic add 1940 -3611 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2077 -3781 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1745 -3781 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1876 -3611 0 0 0 0 0 0 0 0 0 0 0 0 
+transition add 3200 -2700 3516 -2791 3200 -2791 3516 -2807 0 3 0 0 0 0 strtstop = '1'
+graphic add 2071 -3431 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2321 -3519 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2587 -3608 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2688 -3489 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 3140 -2951 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 3201 -2294 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 3086 -2161 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2962 -2017 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2758 -2026 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2474 -1988 0 0 0 0 0 0 0 0 0 0 0 0 
+state select 0 0 0 0 0 0 0 0 0 6 0 0 0 0 
+transition add 1800 -850 2116 -941 1800 -941 2116 -957 0 6 0 0 0 0 strtstop = '0'
+graphic add 1972 -1156 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1836 -987 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2168 -987 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2034 -1156 0 0 0 0 0 0 0 0 0 0 0 0 
+transition add 2157 -1507 2473 -1598 2157 -1598 2473 -1614 0 3 0 0 0 0 strtstop = '1'
+graphic add 2034 -1522 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2104 -1606 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2175 -1692 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 2246 -1779 0 0 0 0 0 0 0 0 0 0 0 0 
+state select 0 0 0 0 0 0 0 0 0 7 0 0 0 0 
+transition add 650 -1600 1156 -1728 650 -1728 1156 -1740 0 1 0 0 0 0 reset = '1' OR DCM_lock = '0'
+graphic add 1118 -1702 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1170 -1671 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1222 -1640 0 0 0 0 0 0 0 0 0 0 0 0 
+graphic add 1274 -1610 0 0 0 0 0 0 0 0 0 0 0 0 
+text add 2750 -700 3186 -791 0 0 0 0 15 0 1 162 0 0 STMACH_V

@@ -1,0 +1,62 @@
+-- Copyright(C) 2005 by Xilinx, Inc. All rights reserved. 
+-- The files included in this design directory contain proprietary, confidential information of 
+-- Xilinx, Inc., are distributed under license from Xilinx, Inc., and may be used, copied 
+-- and/or disclosed only pursuant to the terms of a valid license agreement with Xilinx, Inc. 
+-- This copyright notice must be retained as part of this text at all times. 
+
+
+Description: Gold Code Generators in Virtex Devices. For a full functional 
+description see Application Note 217:  http://www.xilinx.com/xapp/xapp217.pdf
+
+Design Type: ISE (chip 3s50 PQ208 -4)
+
+Source Files:
+
+Files Hierarchy:
+	vhd_top.vhd (Top-level)
+	vhd_suba.vhd (Implementation of one LFSR)
+	vhd_subb.vhd (Implementation of second LFSR)
+
+Inputs:
+	Clock
+	Enable
+	Fill_En_A
+	New_Fill_A
+	Fill_En_B
+	New_Fill_B
+	
+Outputs:
+	Gold_Code
+
+SIMULATION:
+Requires the following simulation libraries:
+	Unisims
+	Simprims
+
+Simulation Resolution must be set to PS.
+
+Behavioural and RTL Simulation done using VHDL Testbench 
+for each design.
+
+Notes:
+	- The sequence length can be configured by 
+	  modifiying the "generic" parameters listed
+	  in the entity statements for vhd_suba.vhd and
+	  vhd_subb.vhd files
+	- The CLKDLL component is not inserted into the
+	  code. To see how to use the CLKDLL in VHDL
+	  see solution 5649 at http://support.xilinx.com
+
+
+NOTE: If you are trying to run this example in a read-only location,    
+the design hierachy will not display properly. Please copy the example  
+project to a new location by using either Project Save As... from the File menu
+pulldown in ISE or some other method of your choice. Copy the example to a location
+where you have write permissions and the hiearchy will display properly. 
+
+
+For support information and contacts please see:
+
+	http://www.xilinx.com/support
+or
+	http://www.xilinx.com/support/services/contact_info.htm

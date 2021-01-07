@@ -1,0 +1,53 @@
+-- Copyright(C) 2005 by Xilinx, Inc. All rights reserved. 
+-- The files included in this design directory contain proprietary, confidential information of 
+-- Xilinx, Inc., are distributed under license from Xilinx, Inc., and may be used, copied 
+-- and/or disclosed only pursuant to the terms of a valid license agreement with Xilinx, Inc. 
+-- This copyright notice must be retained as part of this text at all times. 
+
+
+Description:
+The design is based upon the BCD-counter and the 7-segment LED display.
+The method of measurement is comparing the input signal frequency with
+the reference clock signal that is faster than the measured signal.
+The measurment is started by setting the START signal to '1'. Setting
+START back to '0' finishes the measurment and resets the meter.
+The design includes 3 blocks described as behavioral VHDL code
+that are synthesized and implemented in a Xilinx FPGA.
+
+Project FREQM is a simple implementation of a frequency meter with 
+the BCD-counter and the 7-segment LED display.
+ 
+Design Type: ISE (chip 2Vp2 FG256-7)
+
+Inputs:
+        FINPUT - measured frequency clock input
+	   FPATTERN - reference frequency clock input
+	   START - input logical signal starting the measurement, active HIGH
+        RESET - asynchronous reset, active in HIGH.
+
+Outputs:
+        four-positions 7-segment LED display
+	  LED_D[6:0] - the most significant decimal digit 
+	  LED_C[6:0] - 
+	  LED_B[6:0] - 
+	  LED_A[6:0] - the least significant decimal digit
+	  FULL - counter overflow flag
+
+Simulation:
+Simulation requires the following libraries:
+Unisims
+Simprims
+
+Behavioural and RTL Simulation done using VHDL Testbench (freqm_tb.vhd).
+
+NOTE: If you are trying to run this example in a read-only location,    
+the design hierachy will not display properly. Please copy the example  
+project to a new location by using either Project Save As... from the File menu
+pulldown in ISE or some other method of your choice. Copy the example to a location
+where you have write permissions and the hiearchy will display properly. 
+
+For support information and contacts please see:
+
+	http://www.xilinx.com/support
+or
+	http://www.xilinx.com/support/services/contact_info.htm

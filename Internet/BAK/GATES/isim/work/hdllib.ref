@@ -1,0 +1,4 @@
+EN gates NULL D:/Internet/GATES/gates.vhd sub00/vhpl00 1607514360
+AR gates_simu testbench_arch D:/Internet/GATES/gates_simu.vhw sub00/vhpl03 1607514605
+EN gates_simu NULL D:/Internet/GATES/gates_simu.vhw sub00/vhpl02 1607514604
+AR gates behavioral D:/Internet/GATES/gates.vhd sub00/vhpl01 1607514361

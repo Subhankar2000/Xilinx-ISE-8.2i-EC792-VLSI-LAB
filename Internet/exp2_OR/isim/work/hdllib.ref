@@ -1,0 +1,4 @@
+AR tb testbench_arch D:/Xilinx_projects/Internet/exp2_OR/tb.vhw sub00/vhpl03 1608045873
+EN tb NULL D:/Xilinx_projects/Internet/exp2_OR/tb.vhw sub00/vhpl02 1608045872
+EN exp2_or NULL D:/Xilinx_projects/Internet/exp2_OR/exp2_OR.vhd sub00/vhpl00 1608045870
+AR exp2_or behavioral D:/Xilinx_projects/Internet/exp2_OR/exp2_OR.vhd sub00/vhpl01 1608045871

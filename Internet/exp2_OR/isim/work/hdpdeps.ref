@@ -1,0 +1,14 @@
+V3 7
+FL D:/Xilinx_projects/Internet/exp2_OR/exp2_OR.vhd 2020/12/15.20:51:21 I.31
+EN work/exp2_OR 1608045870         FL D:/Xilinx_projects/Internet/exp2_OR/exp2_OR.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/exp2_OR/Behavioral 1608045871 FL D:/Xilinx_projects/Internet/exp2_OR/exp2_OR.vhd \
+      EN work/exp2_OR 1608045870
+FL D:/Xilinx_projects/Internet/exp2_OR/tb.vhw 2020/12/15.20:54:15 I.31
+EN work/tb 1608045872              FL D:/Xilinx_projects/Internet/exp2_OR/tb.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/tb/testbench_arch 1608045873 FL D:/Xilinx_projects/Internet/exp2_OR/tb.vhw \
+      EN work/tb 1608045872 CP exp2_OR     PB ieee/STD_LOGIC_TEXTIO 1147840859

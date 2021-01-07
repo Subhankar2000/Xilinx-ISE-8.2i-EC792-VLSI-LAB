@@ -1,0 +1,3 @@
+MODULE full_add_sim
+SUBMODULE full_add
+INSTANCE UUT

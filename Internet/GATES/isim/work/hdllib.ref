@@ -1,0 +1,4 @@
+EN gates NULL D:/Xilinx_projects/Internet/GATES/gates.vhd sub00/vhpl00 1608174788
+AR gates_simu testbench_arch D:/Xilinx_projects/Internet/GATES/gates_simu.vhw sub00/vhpl03 1608174791
+EN gates_simu NULL D:/Xilinx_projects/Internet/GATES/gates_simu.vhw sub00/vhpl02 1608174790
+AR gates behavioral D:/Xilinx_projects/Internet/GATES/gates.vhd sub00/vhpl01 1608174789

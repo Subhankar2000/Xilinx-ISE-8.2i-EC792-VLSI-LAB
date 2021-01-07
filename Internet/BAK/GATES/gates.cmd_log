@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/Internet/BAK/GATES/GATES.ise" -intstyle ise -ifn gates.xst -ofn gates.syr

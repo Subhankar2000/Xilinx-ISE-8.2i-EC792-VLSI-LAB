@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/Internet/exp3_AND/exp3_AND.ise" -intstyle ise -ifn exp3_AND.xst -ofn exp3_AND.syr

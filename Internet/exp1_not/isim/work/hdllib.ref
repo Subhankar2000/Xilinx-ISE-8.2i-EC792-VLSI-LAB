@@ -1,0 +1,4 @@
+AR exp1_not behavioral D:/Xilinx_projects/Internet/exp1_not/exp1_not.vhd sub00/vhpl01 1607790632
+EN exp1_not NULL D:/Xilinx_projects/Internet/exp1_not/exp1_not.vhd sub00/vhpl00 1607790631
+AR tb testbench_arch D:/Xilinx_projects/Internet/exp1_not/tb.vhw sub00/vhpl03 1607790634
+EN tb NULL D:/Xilinx_projects/Internet/exp1_not/tb.vhw sub00/vhpl02 1607790633

@@ -1,0 +1,33 @@
+ command line:
+   ./gates_simu_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  51659
+
+Fri Dec 11 17:58:47 2020
+
+Total Line Count = 874
+
+ Elaboration time 0 sec.
+
+ Estimate current memory usage 103.539 Meg. 
+
+ Total signals 18
+ Total nets 9
+ Total signal drivers 9
+ Total blocks 7
+ Total primitive blocks 1
+ Total processes 8
+ntrace select -o on -n /gates_simu/a 
+ntrace select -o on -n /gates_simu/b 
+ntrace select -o on -n /gates_simu/and1 
+ntrace select -o on -n /gates_simu/or1 
+ntrace select -o on -n /gates_simu/not1 
+ntrace select -o on -n /gates_simu/xor1 
+ntrace select -o on -n /gates_simu/nand1 
+ntrace select -o on -n /gates_simu/nor1 
+ntrace select -o on -n /gates_simu/xnor1 
+ntrace start 
+run all 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

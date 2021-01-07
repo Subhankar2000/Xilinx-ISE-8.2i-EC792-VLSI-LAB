@@ -1,0 +1,2 @@
+vhdl work "full_add.vhd"
+vhdl work "full_add_sim.vhw"

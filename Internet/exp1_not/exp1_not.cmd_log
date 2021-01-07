@@ -1,0 +1,7 @@
+xst -ise "D:/Xilinx_projects/Internet/exp1_not/exp1_not.ise" -intstyle ise -ifn exp1_not.xst -ofn exp1_not.syr
+ngdbuild -ise "D:/Xilinx_projects/Internet/exp1_not/exp1_not.ise" -intstyle ise -dd _ngo -i -p acr2 "exp1_not.ngc" exp1_not.ngd
+cpldfit -ise "D:/Xilinx_projects/Internet/exp1_not/exp1_not.ise" -intstyle ise -p xa2c*-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 exp1_not.ngd
+XSLTProcess -ise "D:/Xilinx_projects/Internet/exp1_not/exp1_not.ise" exp1_not_build.xml
+tsim -ise "D:/Xilinx_projects/Internet/exp1_not/exp1_not.ise" -intstyle ise exp1_not exp1_not.nga
+taengine -ise "D:/Xilinx_projects/Internet/exp1_not/exp1_not.ise" -intstyle ise -f exp1_not -w --format html1 -l D:/Xilinx_projects/Internet/exp1_not/exp1_not_html/tim/timing_report.htm
+hprep6 -ise "D:/Xilinx_projects/Internet/exp1_not/exp1_not.ise" -s IEEE1149 -i exp1_not

@@ -1,0 +1,82 @@
+module jc2_top
+Title 'jc2_abl'
+
+Declarations
+
+// Design must target an XC9536XL-CS48 device
+
+//Inputs
+LEFT 	PIN 'G7';		//Active-low switch #3 (left)
+RIGHT 	PIN 'B2';		//Active-low switch #0 (right)
+STOP 	PIN 'F2';		//Active-low switch #2
+CLK 	PIN 'A7';		//GCK1 on XC9536XL CPLD
+
+//LED Outputs (active-low)
+BUS [3..0]Q 	PIN 'G5','F6','C6','B4' istype 'reg';
+
+//Nodes
+DIR node istype 'reg_jk';	//Left=1, Right=0
+RUN node istype 'reg_jk';
+
+Equations
+
+DIR.j = !LEFT;
+DIR.k = !RIGHT;
+DIR.clk = CLK;
+
+RUN.j = !LEFT # !RIGHT;
+RUN.k = !STOP;
+RUN.clk = CLK;
+
+//Counter section
+WHEN (DIR==1) then { Q[3..1] := Q[2..0];
+                     Q[0] := !Q[3]; }
+               else { Q[2..0] := Q[3..1];
+                     Q[3] := !Q[0]; }
+Q[3..0].ce = RUN;
+Q[3..0].clk = CLK;
+
+// Test Vectors for functional simulation
+
+test_vectors([ LEFT, RIGHT, STOP, CLK  ] -> [ Q[3..0]]);
+            [  1,    1,     1,    .C.  ] -> [ ^b0000 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0000 ];
+            [  0,    1,     1,    .C.  ] -> [ ^b0000 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0001 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0011 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1110 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1100 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1000 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0000 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0001 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0011 ];
+            [  1,    1,     0,    .C.  ] -> [ ^b0111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0111 ];
+            [  1,    0,     1,    .C.  ] -> [ ^b0111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0011 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0001 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0000 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1000 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1100 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1110 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0011 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0001 ];
+            [  0,    1,     1,    .C.  ] -> [ ^b0000 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0001 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0011 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1111 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1110 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1100 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b1000 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0000 ];
+            [  1,    1,     1,    .C.  ] -> [ ^b0001 ];
+
+end jc2_top

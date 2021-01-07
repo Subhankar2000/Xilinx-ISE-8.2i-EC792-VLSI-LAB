@@ -1,0 +1,22 @@
+V3 17
+FL D:/Xilinx_projects/Internet/FULL_ADDER/full_add_sim.tfw 2020/12/11.18:00:05 I.31
+MO work/full_add_sim    FL D:/Xilinx_projects/Internet/FULL_ADDER/full_add_sim.tfw \
+      MI full_add
+FL D:/Internet/FULL_ADDER/full_add.vhd 2020/12/09.16:35:35 I.31
+EN work/full_add -1        FL D:/Internet/FULL_ADDER/full_add.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/full_add/Behavioral -1 FL D:/Internet/FULL_ADDER/full_add.vhd \
+      EN work/full_add 1607512138
+FL $XILINX/verilog/src/glbl.v 2006/05/17.23:39:08 I.31
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL D:/Xilinx_projects/Internet/FULL_ADDER/full_add.vf 2020/12/11.18:00:03 I.31
+MO work/full_add        FL D:/Xilinx_projects/Internet/FULL_ADDER/full_add.vf \
+      MI AND2           MI OR2            MI XOR2
+FL D:/Internet/FULL_ADDER/full_add_sim.vhw 2020/12/09.18:48:20 I.31
+EN work/full_add_sim -1    FL D:/Internet/FULL_ADDER/full_add_sim.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/full_add_sim/testbench_arch -1 FL D:/Internet/FULL_ADDER/full_add_sim.vhw \
+      EN work/full_add_sim 1607519909 CP full_add PB ieee/STD_LOGIC_TEXTIO 1147840859

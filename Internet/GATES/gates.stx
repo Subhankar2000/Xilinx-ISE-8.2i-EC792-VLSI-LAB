@@ -1,0 +1,23 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.18 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3215 - Unit work/gates is now defined in a different file: was D:/Xilinx_projects/Internet/BAK/GATES/gates.vhd, now is D:/Xilinx_projects/Internet/GATES/gates.vhd
+WARNING:HDLParsers:3215 - Unit work/gates/Behavioral is now defined in a different file: was D:/Xilinx_projects/Internet/BAK/GATES/gates.vhd, now is D:/Xilinx_projects/Internet/GATES/gates.vhd
+Compiling vhdl file "D:/Xilinx_projects/Internet/GATES/gates.vhd" in Library work.
+Architecture behavioral of Entity gates is up to date.
+CPU : 0.15 / 0.33 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+
+Total memory usage is 179668 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/SK/E7_FADD/E7_FADD.ise" -intstyle ise -ifn E7_FADD.xst -ofn E7_FADD.syr

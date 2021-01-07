@@ -1,0 +1,33 @@
+Sample Project Name	Project_Description	Source Type	Target Device	UCF	Platform	XST	Synplify	Precision	CORE Gen	Stimulus	
+120	290	100	80	40	72	70	60	60	70	93	100	100
+edif_flow	Sample EDIF Flow project	EDIF	3s300	N	Win/Lin/Sol	N/A	N/A	N/A	N/A	N/A	
+elevator	Elevator design using incremental design flow	Verilog	2V80	Y	Win/Lin/Sol	Y	Y	Y	N	N/A
+flash	Hierarchical Schematic project	Sch/VHDL/Verilog	2VP2	N	Win/Lin	Y	N/A	Y	N	Test bench	
+freqm	Frequency Meter 	VHDL	2VP2	N	Win/Lin	Y	N/A	Y	N	Test bench	
+gold_code_ver_217	XAPP 217:  Gold Code Generator	Verilog	3s200	N	Win/Lin/Sol	Y	Y	Y	N	Test fixture	
+gold_code_vhd_217	XAPP 217:  Gold Code Generator	VHDL	3s50	N	Win/Lin/Sol	Y	Y	Y	N	Test bench	
+jc2_abl	Bidirectional 4-bit Johnson Counter with Stop Control	ABEL	9572XL	N	Win	ABEL-XST	N/A	N/A	N	Test Vectors	
+jc2_abl_cr2	Bidirectional 4-bit Johnson Counter with Stop Control	ABEL	2C128	N	Win	ABEL-XST	N/A	N/A	N	Test Vectors	
+jc2_sabl	Bidirectional 4-bit Johnson Counter with Stop Control	Schematic/ABEL	9572XL	Y	Win	ABEL-XST	N/A	N/A	N	Test bench	
+jc2_sch	Bidirectional 4-bit Johnson Counter with Stop Control	Schematic	9572XL	Y	Win/Lin	Y	N/A	Y	N	Test bench	
+jc2_sver	Bidirectional 4-bit Johnson Counter with Stop Control	Schematic/Verilog	9572XL	Y	Win/Lin	Y	N/A	Y	N	Test fixture	
+jc2_svhd	Bidirectional 4-bit Johnson Counter with Stop Control	Schematic/VHDL	9572XL	Y	Win/Lin	Y	N/A	Y	N	Test bench	
+jc2_ver	Bidirectional 4-bit Johnson Counter with Stop Control	Verilog	9572XL	Y	Win/Lin/Sol	Y	Y	Y	N	Test fixture	
+jc2_vhd	Bidirectional 4-bit Johnson Counter with Stop Control	VHDL	9572XL	N	Win/Lin/Sol	Y	Y	Y	N	Test bench	
+pn_gen_ver_211	XAPP 211:  PN Generator using Virtex SRL Macro	Verilog	3s200	N	Win/Lin/Sol	Y	Y	Y	N	Test fixture	
+pn_gen_vhd_211	XAPP 211:  PN Generator using Virtex SRL Macro	VHDL	3s200	N	Win/Lin/Sol	Y	Y	Y	N	Test bench
+sdram_ver_134	XAPP 134:  SDRAM Controller	Verilog	2V250	N	Win/Lin/Sol	Y	Y	Y	N	Test fixture	
+sdram_vhd_134	XAPP 134:  SDRAM Controller	VHDL	2V250	Y	Win/Lin/Sol	Y	Y	Y	N	Test bench	
+v2_demo_board	Demo design for Virtex2 Demo Board	Verilog	2V40	Y	Win/Lin/Sol	Y	Y	Y	N	N/A	
+v2_fifo_ver_258	XAPP 258:  511x8 FIFO in Virtex2	Verilog	2V40	N	Win/Lin/Sol	Y	Y	Y	N	Test fixture	
+v2_fifo_vhd_258	XAPP 258:  511x8 FIFO in Virtex2	VHDL	2V40	N	Win/Lin/Sol	Y	Y	Y	N	Test bench	
+watch_sc	Stopwatch Design for Tutorial	Schematic/VHDL	2Vp2	N	Win	Y	N/A	Y	Y	TBW	
+watch_sc_cr2	Stopwatch Design for Tutorial	Schematic/VHDL	2C128	Y	Win/Lin	Y	N/A	Y	N	TBW/Test bench	
+watchver	Stopwatch Design for Tutorial	Verilog	2Vp2	N	Win	Y	Y	Y	Y	TBW	
+watchver_cr2	Stopwatch Design for Tutorial	Verilog	2C128	Y	Win	Y	Y	N	N	TBW	
+watchvhd	Stopwatch Design for Tutorial	VHDL	2Vp2	N	Win	Y	Y	Y	Y	TBW	
+watchvhd_cr2	Stopwatch Design for Tutorial	VHDL	2C128	N	Win	Y	Y	N	N	TBW	
+pong	Pong game control for 3S200 Demo Board	Sch/VHDL/Verilog	3s200	N	Win	Y	N/A	Y	N	TBW	
+											
+
+

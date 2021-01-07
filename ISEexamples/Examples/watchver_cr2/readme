@@ -1,0 +1,51 @@
+-- Copyright(C) 2005 by Xilinx, Inc. All rights reserved. 
+-- The files included in this design directory contain proprietary, confidential information of 
+-- Xilinx, Inc., are distributed under license from Xilinx, Inc., and may be used, copied 
+-- and/or disclosed only pursuant to the terms of a valid license agreement with Xilinx, Inc. 
+-- This copyright notice must be retained as part of this text at all times. 
+
+
+WATCHVER is a top level Verilog type project of a Stop Watch. 
+
+DESIGN TYPE:
+        Foundation ISE (chip CoolRunner-II )
+
+CONTROLS 
+Inputs:
+* CLK -System clock for the Watch design. Uses CR-II clock divider
+* STRTSTOP -Starts and stops the stoopwatch. This is an active-low signal 
+            which acts like the start/stop button on a runner's stop-watch.
+* RESET -Resets the stopwatch to 00.0 after it has been stopped.
+
+Outputs:
+* TENSOUT[6:0] -7-bit bus which represents the Tens digit of the stopwatch 
+                value. This bus is in 7-segment display format to be viewable 
+                on the 7-segment LED display. 
+* ONESOUT[6:0] -similar to TENSOUT bus above, but represents the Ones digit 
+                of the stopwatch value.
+* TENTHSOUT[9:0] -10-bit bus which represents the Tenths digit of the stopwatch 
+                  value. This bus is one-hot encoded.
+
+DESCRIPTION:
+* STMACH_A or STMACH_V -State Machine macro. This module uses the VSS 
+                        StateCAD Editor to enter and implement the state machine. 
+* CNT60 -Verilog-based module which counts from 0 to 59, decimal. This macro 
+         has two 4-bit outputs, which represent the 'ones' and 'tens' digits of 
+         the decimal values, respectively.
+* TENTHS -A 10-bit  counter. This macro outputs the 
+          'tenths' digit of the watch value.
+* HEX2LED -HDL-based macro. This macro decodes the ones and tens digit values 
+           from hexadecimal to 7-segment display format.
+
+SIMULATION:
+Requires the following simulation libraries:
+	Unisims_ver
+	Simprims_ver
+
+Behavioural and RTL Simulation done using a Test Bench Waveform (watch_tb.tbw).
+
+For support information and contacts please see:
+
+	http://www.xilinx.com/support
+or
+	http://www.xilinx.com/support/services/contact_info.htm

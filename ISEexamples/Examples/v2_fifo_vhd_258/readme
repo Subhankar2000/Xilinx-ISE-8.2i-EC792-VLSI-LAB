@@ -1,0 +1,55 @@
+-- Copyright(C) 2005 by Xilinx, Inc. All rights reserved. 
+-- The files included in this design directory contain proprietary, confidential information of 
+-- Xilinx, Inc., are distributed under license from Xilinx, Inc., and may be used, copied 
+-- and/or disclosed only pursuant to the terms of a valid license agreement with Xilinx, Inc. 
+-- This copyright notice must be retained as part of this text at all times. 
+
+
+DESCRIPTION: FIFO controller 
+For a full functional description see Application Note 258:
+   http://www.xilinx.com/xapp/xapp258.pdf
+
+Design Type: ISE (chip 2V40 FG256 -4)
+
+Source Files:
+
+fifoctlr_cc - FIFO controller top level. Implements a 511x8 FIFO with common 
+	      read/write clocks. 
+
+fifoctlr_ic - FIFO controller top level. Implements a 511x8 FIFO with independent 
+	      read/write clocks.
+Inputs:
+* read_clock_in  
+* write_clock_in 
+* read_enable_in 
+* write_enable_in 
+* fifo_gsr_in 
+* write_data_in[7;0] 
+
+Outputs:
+* read_data_out[7:0] 
+* full_out 
+* empty_out 
+* fifostatus_out[3:0] 
+
+SIMULATION:
+Requires the following simulation libraries:
+	Unisims
+	Simprims
+
+Behavioural and RTL Simulation done using VHDL Testbench 
+(fifoctlr_cc_tb.vhd and fifoctlr_ic_tb.vhd)
+
+
+NOTE: If you are trying to run this example in a read-only location,    
+the design hierachy will not display properly. Please copy the example  
+project to a new location by using either Project Save As... from the File menu
+pulldown in ISE or some other method of your choice. Copy the example to a location
+where you have write permissions and the hiearchy will display properly. 
+
+
+For support information and contacts please see:
+
+	http://www.xilinx.com/support
+or
+	http://www.xilinx.com/support/services/contact_info.htm

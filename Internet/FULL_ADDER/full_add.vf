@@ -1,0 +1,54 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : full_add.vf
+// /___/   /\     Timestamp : 12/11/2020 18:00:03
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family spartan3 -w D:/Xilinx_projects/Internet/FULL_ADDER/full_add.sch full_add.vf
+//Design Name: full_add
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module full_add(Ain, 
+                Bin, 
+                Cin, 
+                CARRY, 
+                SUM);
+
+    input Ain;
+    input Bin;
+    input Cin;
+   output CARRY;
+   output SUM;
+   
+   wire XLXN_7;
+   wire XLXN_13;
+   wire XLXN_14;
+   
+   XOR2 XLXI_8 (.I0(Bin), 
+                .I1(Ain), 
+                .O(XLXN_7));
+   XOR2 XLXI_11 (.I0(XLXN_7), 
+                 .I1(Cin), 
+                 .O(SUM));
+   AND2 XLXI_12 (.I0(XLXN_7), 
+                 .I1(Cin), 
+                 .O(XLXN_13));
+   AND2 XLXI_13 (.I0(Bin), 
+                 .I1(Ain), 
+                 .O(XLXN_14));
+   OR2 XLXI_14 (.I0(XLXN_14), 
+                .I1(XLXN_13), 
+                .O(CARRY));
+endmodule

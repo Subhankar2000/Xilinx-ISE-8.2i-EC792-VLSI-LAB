@@ -1,0 +1,15 @@
+V3 7
+FL D:/Xilinx_projects/Internet/GATES/gates.vhd 2020/12/09.17:12:09 I.31
+EN work/gates 1608174788           FL D:/Xilinx_projects/Internet/GATES/gates.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/gates/Behavioral 1608174789 FL D:/Xilinx_projects/Internet/GATES/gates.vhd \
+      EN work/gates 1608174788
+FL D:/Xilinx_projects/Internet/GATES/gates_simu.vhw 2020/12/17.08:36:25 I.31
+EN work/gates_simu 1608174790      FL D:/Xilinx_projects/Internet/GATES/gates_simu.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/gates_simu/testbench_arch 1608174791 \
+      FL D:/Xilinx_projects/Internet/GATES/gates_simu.vhw EN work/gates_simu 1608174790 \
+      CP gates          PB ieee/STD_LOGIC_TEXTIO 1147840859

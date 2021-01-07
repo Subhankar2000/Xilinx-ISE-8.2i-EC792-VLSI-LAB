@@ -1,0 +1,3 @@
+MODULE gates_simu
+SUBMODULE gates
+INSTANCE UUT

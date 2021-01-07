@@ -1,0 +1,2 @@
+sch2verilog -intstyle ise -family spartan3   -w "D:/Internet/FULL_ADDER/full_add.sch" full_add.vf
+xst -ise "D:/Internet/FULL_ADDER/FULL_ADDER.ise" -intstyle ise -ifn full_add.xst -ofn full_add.syr

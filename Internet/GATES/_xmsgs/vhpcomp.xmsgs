@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/gates_simu</arg> is now defined in a different file: was <arg fmt="%s" index="2">D:/Internet/GATES/gates_simu.vhw</arg>, now is <arg fmt="%s" index="3">D:/Xilinx_projects/Internet/GATES/gates_simu.vhw</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/gates_simu/testbench_arch</arg> is now defined in a different file: was <arg fmt="%s" index="2">D:/Internet/GATES/gates_simu.vhw</arg>, now is <arg fmt="%s" index="3">D:/Xilinx_projects/Internet/GATES/gates_simu.vhw</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/gates</arg> is now defined in a different file: was <arg fmt="%s" index="2">D:/Internet/GATES/gates.vhd</arg>, now is <arg fmt="%s" index="3">D:/Xilinx_projects/Internet/GATES/gates.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/gates/Behavioral</arg> is now defined in a different file: was <arg fmt="%s" index="2">D:/Internet/GATES/gates.vhd</arg>, now is <arg fmt="%s" index="3">D:/Xilinx_projects/Internet/GATES/gates.vhd</arg>
+</msg>
+
+</messages>

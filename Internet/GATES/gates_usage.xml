@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DesignSummary rev="1">
+<DesignStatistics TimeStamp="Sat Dec 12 22:02:34 2020"><group name="MiscellaneousStatistics">
+<item name="AVG_LUT_FAN_IN" rev="1">
+<attrib name="value" value="2.000000"/></item>
+<item name="AVG_SIG_FANOUT" rev="1">
+<attrib name="value" value="1.000000"/></item>
+<item name="LUT" rev="1">
+<attrib name="value" value="6"/></item>
+<item name="MAX_SIG_FANOUT" rev="1">
+<attrib name="value" value="1"/></item>
+<item name="PK_NUM_4_INPUT_LUTS" rev="1">
+<attrib name="value" value="6"/></item>
+<item name="PK_NUM_BONDED_IOBS" rev="1">
+<attrib name="value" value="9"/></item>
+<item name="PK_NUM_EQUIV_GATES" rev="1">
+<attrib name="value" value="36"/></item>
+<item name="PK_NUM_JTAG_GATES" rev="1">
+<attrib name="value" value="9"/></item>
+<item name="PK_NUM_SLICELS" rev="1">
+<attrib name="value" value="3"/></item>
+<item name="PK_NUM_SLICES" rev="1">
+<attrib name="value" value="3"/></item>
+<item name="SINGLE_LOAD_SIG" rev="1">
+<attrib name="value" value="6"/></item>
+</group>
+</DesignStatistics>
+<CmdHistory>
+</CmdHistory>
+</DesignSummary>

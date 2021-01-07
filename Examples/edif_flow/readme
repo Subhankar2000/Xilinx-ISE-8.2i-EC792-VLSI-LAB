@@ -1,0 +1,42 @@
+-- Copyright(C) 2005 by Xilinx, Inc. All rights reserved. 
+-- The files included in this design directory contain proprietary, confidential information of 
+-- Xilinx, Inc., are distributed under license from Xilinx, Inc., and may be used, copied 
+-- and/or disclosed only pursuant to the terms of a valid license agreement with Xilinx, Inc. 
+-- This copyright notice must be retained as part of this text at all times. 
+
+
+Description: CDMA Matched filter Implementation files (EDIF) for XAPP212
+
+The EDIF file for the parallel matched filter is provided as a reference 
+design. The data width and the oversample rate for the parallel matched 
+filter design are shown below. This design uses a scalable structure 
+for each tap in the filter to be identical. Therefore, ensuring that the 
+basic tap of the filter is properly implemented is important.
+      
+      InDataWidth    : integer := 8
+      OutDataWidth   : integer := 16
+      OverSampleRate : integer := 16
+
+See Application Note 212 for a full functional description.
+
+DESIGN TYPE: ISE (chip V300 BG432 -6)
+
+Source Files:
+
+mf.edn - top level used to generate a specified number of parallel taps
+
+Inputs:
+* InCode
+* InData[iInDataWidth-1 downto 0]
+* SysClk
+* SysRst
+
+Outputs:
+* Result[iOutDataWidth-1 downto 0]
+
+
+For support information and contacts please see:
+
+	http://support.xilinx.com
+or
+	http://support.xilinx.com/support/services/contact_info.htm

@@ -1,0 +1,72 @@
+# The user constraint file (UCF)
+# This is UCF file template which includes examples.  
+# See manuals for detailed description of these and other constraints
+
+# Both the "#" sign and "//" (double slash) are used as comments in the UCF file.
+
+# In the template below the "#" is used for descriptions and the "//" are 
+# used to comment out the examples which can be modified and used.
+# Also, in the examples below all user names are shown in lower case
+# while reserved "key" words are written in CAPITAL letters. 
+# While Timespec identifiers (TSids) can be in either upper or lower case,
+# the convention is to use upper case due to limitations of some CAE tools.
+# Please note that as the implementation tools are case sensitive, the case 
+# that you use for net and Comp names when constraining the design must 
+# match that which was used in creating the design.
+
+# Examples below may be used for initial Timing Constraint Driven Implementation
+
+# NET form of the PERIOD timing constraints (no TSidentifier)
+// NET clk PERIOD = 40 ;
+
+# UCF PERIOD style Timespecs including relative timing constraints
+// NET clk2 TNM = clk2_grp ;
+// NET clk3 TNM = clk3 ;
+// TIMESPEC TS03 = PERIOD clk2_grp 50 ;
+// TIMESPEC TS04 = PERIOD clk3 TS03 * 2 ;
+
+
+# Net form of the OFFSET timing constraint
+// NET add0_in OFFSET = IN 14 AFTER clk ;
+
+
+# UCF FROM : TO style Timespec example
+# Note the example shows spaces or colons (:) may be used as field separators
+// NET data_en TNM = pipea ;
+// TIMEGRP buspads = PADS(bus*) ;
+// TIMESPEC TS01 = FROM:buspads:TO:pipea:20 ;
+// TIMESPEC TS02 = FROM FFS TO RAMS 15 ;
+
+
+// NET $1I6/thisnet TPTHRU=these ;
+// NET $1I6/anothernet TPTHRU=these ;
+// TIMEGRP sflops=FFS(DATA*) ;
+// TIMEGRP dflops=FFS(OUTREG*) ;
+// TIMESPEC TS23=FROM:sflops:THRU:these:TO:dflops:20 ;
+
+# TPSYNC example; pad to a 3-state buffer enable pin
+// Note TPSYNC attached to 3-state buffer’s output NET
+// NET BUS3STATE TPSYNC=bus3;
+// TIMESPEC TSNewSpc3=FROM:PAD(ENABLE_BUS):TO:bus3:20ns;
+
+# Ignore timing on reset net
+// NET RESET_N TIG ;
+
+# A location constraint
+// NET SCLINF LOC = P125 ;
+
+# Other examples of syntax with wildcarding and predefined groups
+# Slow exception for data leaving INA FFs
+// TIMESPEC TS02 = FROM FFS(INA*) TO FFS 80 ;
+
+# Faster timing required for data leaving RAM
+// TIMESPEC TS03 = FROM RAMS TO FFS 20 ;
+
+# Form special time groups related to RAMs
+// INST $1I64 TNM = spdram ;
+// NET rambus0 TPTHRU = ramvia ;
+// NET rambus1 TPTHRU = ramvia ;
+
+# Specify timing for this special timing path
+// TIMESPEC TS04 = FROM spdram THRU ramvia TO FFS 45 ;
+

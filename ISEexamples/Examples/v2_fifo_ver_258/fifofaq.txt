@@ -1,0 +1,202 @@
+
+
+Q: Why is the FIFO described as "511 x 8"?  Why not 512 x 8?
+
+There is one address that drops out of the FIFO, and this
+is done to provide distinct EMPTY/FULL conditions.  In most
+FIFOs, a "direction" signal is generated, so that when the
+read address equals the write address, it was necessary to 
+capture whether the last operation was a read or a write, to 
+determine whether the FIFO just went FULL or EMPTY.  
+
+This directional logic only added to the critical path, which 
+slowed down the performance.  Also, the FULL and EMPTY 
+generation is typically combinatorial, so there is a delay 
+before a valid FULL/EMPTY. 
+
+In designing this FIFO, speed was the utmost concern, at the 
+expense of area.  This circuit produces a registered output 
+for both FULL and EMPTY, that is active on the first possible 
+edge.  Instead of having a directional signal, the EMPTY 
+condition is true when the addresses are equal, and the FULL 
+condition is true when the addresses are one state from wrapping 
+around, or N-1 = FULL (where N is 512/addr width).  In this way, 
+both can be independently determined without additional delays.
+
+
+Q: How can I change the FIFO size?
+
+There is an older version of the VHDL code available that is 
+parametized, which makes it easy to change the size.  The
+Verilog is a little more involved, because the control 
+logic needs to be updated to match the new FIFO size.  For
+example, if instead of a 511 x 8, you wanted a 255 x 16,
+the data width goes from 8 to 16 and the address width 
+goes from 9 to 8, so anywhere the data/addresses are 
+referenced will need to be changed, including the INIT
+values on the address registers.
+
+
+Q: How does the timing change if I expand the FIFO size?
+
+The timing is pretty consistent, and depends on only two
+factors: the address width, and the total number of BRAMs.
+In the 511 x 8 FIFO, the address width is 9 bits.  If it
+was changed to a 4K x 1, the address width would be 12 bits,
+or 3 additional bits.  This would expand the carry logic by
+3 bits, and would add a small amount of delay (roughly 0.3ns).
+
+If the FIFO is expanded to a larger size (for example, 4K x 8),
+the number of BRAMs increases to 8.  If all 8 can be located
+in the same column (a v300 has 8 per column), then the timing
+will be very comparable with the 4K x 1 case, because the
+Virtex architecture has multiple high-fanout routing resources
+dedicated to the BRAM columns.  If, however, the BRAMs were
+spread out across multiple columns of BRAMs, then the speed
+would be limited by the extra delay necessary to connect up
+these resources horizontally.
+
+
+Q: What is the maximum ratio of clock rates (in the Async version)?
+
+There may not be a theoretical maximum.  Take, for example, a write 
+clock at 4x the read clock.  It will have the potential to fill up 
+the FIFO 4 times as fast.  But since the FULL flag is clocked on the 
+write clock, there will be no latency involved (it would be disasterous 
+if writes were allowed after the FIFO truly went FULL, i.e. the FULL
+flag were clocked on the read clock).
+
+The slower read clock should have no problem whatsoever, as it will 
+have plenty of time to read data relative to the write clock, and
+similar to the FULL case above, the EMPTY flag is clocked on read, so 
+it will never send a false "EMPTY" condition.
+
+
+Q: When you compare read and write pointers, even in gray-code,
+   is there a possibility of incorrect value matching?  For example, if
+   the read address was 1100 and the write address was 0110, you might
+   get x0x0 for equality comparison.
+
+A: There wouldn't be TWO unknown bits in the comparison, only one,
+   because whichever signal you are generating (FULL or EMPTY) will
+   be synchronous with ONE of the counters (EMPTY with Read, and
+   FULL with Write).  If you miss the "new" comparison value, it would 
+   only cause the FIFO to stay FULL or EMPTY one cycle longer, but it 
+   would not cause any errors.  This is because GOING FULL or EMPTY is 
+   synchronous, but when either flag goes inactive, it is because of the 
+   other clock domain (an asynchonous operation), and staying FULL or
+   EMPTY one cycle longer than necessary is not a fatal problem.
+
+
+Q: Is metastability an issue in the Asynchronous design, since you 
+   have clocks with no relation to each other?
+
+A: Xilinx flip-flops have a very long MTBF.  (See page 14-48 of the 1999 
+   data book, or a newer reference book).  Even the much older XC4000E-3
+   flip-flops at 10Mhz/1Mhz clock/data rate have a MTBF of 1 million years,
+   when you allow 2.0ns of slack.  At 100Mhz/80Mhz, the MTBF would be reduced
+   by a factor of 800, or 1250 years.  This also assumes the FIFO is going
+   FULL or EMPTY on every clock cycle, which is impractical.
+
+   If we look at the EMPTY condition, there are two critical transitions: the 
+   beginning of the EMPTY signal ("don't read any more") and the end of the 
+   EMPTY signal ( "it's ok to read again").
+
+   The critical transition is the beginning, since we must ABSOLUTELY stop the 
+   next read operation.  Luckily, the path from the read gray-code addresses
+   to the EMPTY flag is actually synchronous, since both are clocked by the read
+   clock.  The write clock has nothing to do with this transition, so this 
+   portion of the operation is synchronous, and metastability is no issue. 
+   (Of course, all delays must fit within one read clock period, but that is 
+   the obvious limitation of any synchronous design.)
+
+   The ending of the EMPTY signal is an asynchronous event, since it is 
+   initiated by a write clock, but must be interpreted by the read clock.  But, 
+   luckily, the interpretation need not be precise.  At worst, there will be an 
+   unnecessary extra wait state before reading the next word.  Considering that 
+   the timing relationship was already marginal, that is not a big loss, and 
+   definitely does NOT result in any loss of data.
+
+   To examine in more detail, for either the EMPTY or the FULL flag, we need to 
+   look at what happens if and when the outputs go metastable, as this is a 
+   possibility.
+
+   If we assume the FIFO has some data in it, and we perform read operations, 
+   the read gray counter (RGC) will eventually be equivalent to the write gray 
+   counter (WGC), which will set the empty flag.  The path from the RGC to the 
+   EMPTY register is a synchronous one, as both source and destination are 
+   clocked on the Read Clock, so this is not a problem.  The path from the 
+   WGC to EMPTY is, of course, asynchronous, so it provides a possible problem.
+
+   Since both the counters are gray-coded, only one bit can change at a time.  
+   So during a series of read operations, the comparator, which is made up of 
+   a string of individual AND gates, will gradually have more of the ANDs be 
+   asserted, until only one bit is different between the two counters.  After 
+   the next read, the counters would be equal, and EMPTY would go high.  
+   Combonatorially, this is a "clean" transition.  This is ONLY true because 
+   of the gray-code addressing scheme.  If more than one bit of the comparators 
+   could change (i.e. binary), then it would be possible for the compator 
+   output to glitch high, even though the read and write count were far away 
+   from each other.
+
+   Now what happens if the WGC changes, and doesn't meet the setup-time 
+   requirement on the EMPTY register?  The EMPTY flag may go metastable.  But 
+   in this case, if it goes to asserted (EMPTY=1), it is only a performance 
+   issue, as it will resolve itself on the next Read Clock.  If it instead 
+   goes to unasserted (EMPTY=0), this is okay also, because if the WGC changed, 
+   it means there was a new word written in, so the FIFO is not empty.
+
+   In the EMPTY state, the conditions are similar: if a write causes a 
+   metastable EMPTY flag, then there is one new word in the FIFO, so regardless 
+   of how EMPTY is resolved, the FIFO will not cause an error.
+
+   The two problems that would be catastrophic are: 1) if the FIFO was able to 
+   generate a high EMPTY flag, when there was data in the FIFO, and it never 
+   resolved itself, and 2) if the FIFO generated a low EMPTY, when there was 
+   no data in the FIFO.  The first case will be resolved after one Read Clock, 
+   as mentioned above, and the second case is impossible, as a change of WGC is 
+   the only thing that can trigger the metastable state, which indicates the 
+   FIFO is NOT empty.
+
+   Again, the FULL flag is a similar case, just with opposite clocks and 
+   transition direction.
+
+
+   Or, as another Senior Engineer put it:
+
+   All Xilinx FIFOs generate the EMPTY flag by comparing the content of the 
+   two Grey-coded address counters for read and write.  This identity 
+   comparator is the AND function of multiple single-bit XNOR comparators. 
+   There can thus be no output glitches when the two counters contain different 
+   address information. This is crucial for the reliable operation!
+
+   Since Xilinx claims that the FIFO operates reliable with totally asynchronous 
+   read and write clocks, the behavior under extreme operating conditions must 
+   be explained.
+
+   There are two such extreme cases:
+
+   1.  The read clock that causes EMPTY occurs "simultaneously" with a write 
+       clock that increments the write address counter. Depending on the 
+       relative timing of the two clocks, this will or will not create a runt 
+       pulse (glitch) on EMPTY, which will or will not set the EMPTY flag.  
+       Either result is acceptable.
+
+   2.  Following an empty condition, the first write clock that writes data 
+       into the empty FIFO occurs "simultaneously" with a read clock (which 
+       obviously is just a free-running clock that has not incremented the 
+       read counter, since the EMPTY flag is set). The write clock increments 
+       the write counter and thus makes EMPTY go inactive. This High-to-Low 
+       transition on the output of the identity comparator might occur within 
+       the set-up-time window of the EMPTY flip-flop (clocked by the read 
+       clock), and might even make the EMPTY flip-flop go metastable, i.e.  
+       either stay High or go Low or, allegedly even oscillate for a few ns.  
+       Either result is acceptable, since the FIFO obviously is no longer empty.
+
+   All further read and write clocks will keep the EMPTY comparator output 
+   inactive, until the read counter again catches up with the write counter.
+
+   These designs solve all asynchronous issues by making the EMPTY flag err 
+   only in the direction of calling out "EMPTY" when perhaps not needed, but 
+   never in the opposite direction.
+

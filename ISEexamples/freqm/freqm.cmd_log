@@ -1,0 +1,1 @@
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "D:/ISEexamples/freqm/freqm.sch" freqm.vhf

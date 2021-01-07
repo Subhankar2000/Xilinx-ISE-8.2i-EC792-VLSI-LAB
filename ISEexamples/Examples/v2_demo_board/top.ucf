@@ -1,0 +1,61 @@
+#### UCF file created by Project Navigator
+NET "A" LOC = "J15";
+NET "B" LOC = "J13";
+NET "C" LOC = "J16";
+NET "down" LOC = "R10";
+NET "left" LOC = "N16";
+NET "right" LOC = "T10";
+NET "up" LOC = "M13";
+NET "RS" LOC = "H3";
+NET "RW" LOC = "H4";
+NET "EN" LOC = "H1";
+NET "FiftyM_clk" LOC = "A9";
+NET "rst" LOC = "A7";
+NET "half1" LOC = "H16";
+NET "half2" LOC = "H15";
+NET "half3" LOC = "E14";
+NET "half4" LOC = "E13";
+NET "star" LOC = "P16";
+NET "D" LOC = "J14";
+
+
+#Use the apporpriate section below based on the 
+#synthesis tool to be used.
+
+#**********************************************
+# For XST
+NET "DB<0>" LOC = "J1";
+NET "DB<1>" LOC = "J2";
+NET "DB<2>" LOC = "J3";
+NET "DB<3>" LOC = "J4";
+NET "DB<4>" LOC = "M3";
+NET "DB<5>" LOC = "M4";
+NET "DB<6>" LOC = "N1";
+NET "DB<7>" LOC = "P1";
+
+
+#**********************************************
+# For Synplify / Synplify Pro 
+#NET "DB[0]" LOC = "J1";
+#NET "DB[1]" LOC = "J2";
+#NET "DB[2]" LOC = "J3";
+#NET "DB[3]" LOC = "J4";
+#NET "DB[4]" LOC = "M3";
+#NET "DB[5]" LOC = "M4";
+#NET "DB[6]" LOC = "N1";
+#NET "DB[7]" LOC = "P1";
+
+
+#**********************************************
+# For LeonardoSpectrum
+#NET "DB(0)" LOC = "J1";
+#NET "DB(1)" LOC = "J2";
+#NET "DB(2)" LOC = "J3";
+#NET "DB(3)" LOC = "J4";
+#NET "DB(4)" LOC = "M3";
+#NET "DB(5)" LOC = "M4";
+#NET "DB(6)" LOC = "N1";
+#NET "DB(7)" LOC = "P1";
+
+
+

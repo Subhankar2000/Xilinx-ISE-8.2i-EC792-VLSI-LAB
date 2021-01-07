@@ -1,0 +1,23 @@
+module jcounter
+Title 'jcounter'
+
+Declarations
+
+//Inputs
+CE	PIN;			//Clock Enable
+LEFT	PIN;			//Direction Control
+CLK	PIN;			//Clock Input
+
+//Outputs
+[Q3..Q0] PIN istype'reg';
+
+EQUATIONS
+
+WHEN (LEFT==1) then { [Q3..Q1] := [Q2..Q0];
+                     Q0 := !Q3; }
+               else { [Q2..Q0] := [Q3..Q1];
+                     Q3 := !Q0; }
+[Q3..Q0].ce = CE;
+[Q3..Q0].clk = CLK;
+
+end jcounter

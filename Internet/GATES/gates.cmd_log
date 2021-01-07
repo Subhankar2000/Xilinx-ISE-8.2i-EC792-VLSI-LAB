@@ -1,0 +1,6 @@
+xst -ise "D:/Xilinx_projects/Internet/GATES/GATES.ise" -intstyle ise -ifn gates.xst -ofn gates.syr
+xst -ise "D:/Xilinx_projects/Internet/GATES/GATES.ise" -intstyle ise -ifn gates.xst -ofn gates.syr
+ngdbuild -ise "D:/Xilinx_projects/Internet/GATES/GATES.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 "gates.ngc" gates.ngd
+map -ise "D:/Xilinx_projects/Internet/GATES/GATES.ise" -intstyle ise -p xc3s400-pq208-4 -cm area -pr b -k 4 -c 100 -o gates_map.ncd gates.ngd gates.pcf
+par -ise "D:/Xilinx_projects/Internet/GATES/GATES.ise" -w -intstyle ise -ol std -t 1 gates_map.ncd gates.ncd gates.pcf
+trce -ise "D:/Xilinx_projects/Internet/GATES/GATES.ise" -intstyle ise -e 3 -l 3 -s 4 -xml gates gates.ncd -o gates.twr gates.pcf

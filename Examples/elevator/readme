@@ -1,0 +1,93 @@
+-- Copyright(C) 2006 by Xilinx, Inc. All rights reserved. 
+-- The files included in this design directory contain proprietary, confidential information of 
+-- Xilinx, Inc., are distributed under license from Xilinx, Inc., and may be used, copied 
+-- and/or disclosed only pursuant to the terms of a valid license agreement with Xilinx, Inc. 
+-- This copyright notice must be retained as part of this text at all times. 
+-----------------------------------------------------------------------
+
+The elevator project is set up to demonstrate the use of a partitioned design.
+The project uses logical partitions to allow small design changes to effect only 
+the pre-defined logic group(s) containing the changes.  This allows customers to perform 
+more design runs in a shorter amount of time, resulting in a faster time to market.
+
+***** Design Description *****
+
+Elevator is a simple 10-floor elevator controller design consisting of a top level module which 
+instantiates four sub-modules comprising four Logic Groups. There are two elevators.  The main 
+elevator car has access to floors 1 through 9.  The express car allows you to access the 10th 
+floor from the 1st floor when the correct security code is entered.
+
+  top.v   - The top-level which connects all the logic groups to each other and to the top-level ports.
+  Contoller.v - Evaluates passenger input and elevator car status to determine needed action for elevator cars.
+  elevator_car.v - Control module for main elevator car.
+  express_car.v - Control module for express elevator car.
+  tracking.v - Module used to store elevator status and maintenance log.   
+
+A constraints file top.ucf contains timing constraints, pin locations and area groups for implementation.
+
+The project also includes a testbench top_tb.v to show the functionality of the design.
+
+Target Device: (2V80 FG256 -6)
+
+
+CONTROLS 
+
+
+Inputs:
+  clk   - System clock for the Elevator design.
+  reset - Sets the Elevator cars to a know position/status representing the power-on 
+          state of the Elevator.
+  data_enable - Controls reading of Maintenance log by elevator maintenance worker
+  write_enable - Controls writing to Maintenance log by elevator maintenance worker
+  main_external_requests  - 9 bit signal indicating a request from one of the nine 
+                            floors to have the elevator come to that floor to pick 
+                            up a passenger
+  exp_request_up - Outside request to go up in the Express car
+  exp_request_down - Outside request to go down in the Express car.
+  main_sensor_trip - Trip signal indicating that the Elevator is "stuck", issued by 
+                     passenger inside main car
+  main_internal_requests - 9 bit signal indicating requested floor from inside the main elevator car.
+  main_temp - 8 bit signal representing the temperature in the main car
+  exp_update_enable - enables updating or changing the security code for the express car
+  exp_input_code  - 14 bit signal this is the security code that must be entered in the 
+                    express car to access the 10th floor
+  exp_temp - 8 bit signal representing the temperature in the express car
+
+
+Outputs:
+  maintenance_alarm - Signal indicating that the maintenance alarm has been triggered
+                      This indicates that the elevator is too hot, too cold or stuck
+  exp_floor_disp  - 14 bit signal use to indicate the current floor of the express elevator
+                    on two 7-seg LED displays
+  exp_move_up     - Signal asserted when Express Car is moving up
+  exp_move_down   - Signal asserted when Express Car is moving down 
+  main_floor_disp - 14 bit signal use to indicate the current floor of the main elevator 
+                    on two 7-seg LED displays.
+  main_move_up    - Signal asserted when main Car is moving up
+  main_move_down  - Signal asserted when main Car is moving down 
+
+
+Bi-directional:
+  maint_data  - 8 bit signal for data input and extraction from maintenance log
+
+
+______________________________________________________________________________________________
+
+
+* For more information on Incremental Design please see the Incremental Design
+  Section of the Development System Reference Guide at:
+
+  http://www.xilinx.com/support/sw_manuals/xilinx7/index.htm
+
+* For support information and contacts please visit the Xilinx.com support site at:
+
+  http://www.xilinx.com/support
+            -or-
+  http://www.xilinx.com/support/services/contact_info.htm
+
+* For technical support, please open a WebCase on the Xilinx Support site at:
+
+  http://www.xilinx.com/support/clearexpress/websupport.htm
+
+
+

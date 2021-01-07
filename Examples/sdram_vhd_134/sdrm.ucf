@@ -1,0 +1,111 @@
+#Note: When using Synplify or Synplify Pro or LeonardoSpectrum for synthesis, 
+#      replace all <> characters with () characters.
+
+
+#NET Locked_i MAXDELAY = 6.5ns;
+
+#####################
+# clock constraints #
+#####################
+NET "Clkp"     PERIOD = 16ns ;
+
+#
+#specifying clock periods between clk1x and clk2x
+#
+NET Clk_i  TNM=c2x;
+NET Clk_j  TNM=c1x;
+TIMESPEC TS10= FROM: c2x: TO: c1x: 8ns;
+TIMESPEC TS11= FROM: c1x: TO: c2x: 8ns;
+
+################################
+# input and output constraints #
+################################
+#
+#The min setup (Tsu) of the SDRAM-8 is 2ns, plus 500ps of board delay
+#we need to add this OFFSET to all outputs to SDRAM
+#
+NET sd_add<*> OFFSET = OUT : 2.5 : BEFORE : Clkp ;
+NET sd_data<*> OFFSET = OUT : 2.5 : BEFORE : Clkp ;
+NET sd_ras OFFSET = OUT	: 2.5 : BEFORE : Clkp ;
+NET sd_cas OFFSET = OUT	: 2.5 : BEFORE : Clkp ;
+NET sd_we OFFSET = OUT : 2.5 : BEFORE : Clkp ;
+NET sd_ba OFFSET = OUT : 2.5 : BEFORE : Clkp ;
+#
+#The max clock-to-out (Tac) of the SDRAM-8 is 6ns, plus 300ps of board delay
+#we need to add this OFFSET to all inputs from SDRAM
+#
+NET sd_data<*> OFFSET = IN : 6.3 : AFTER : Clkp;
+
+
+###########################################
+# set NODELAY attribute for input signals #
+##########################################
+#By default, the IBUF has a DELAY element to guarantee 0 hold time
+#By turning off the DELAY element, we save ~500ps in IBUF delay
+NET sd_data<0> NODELAY;
+NET sd_data<1> NODELAY;
+NET sd_data<2> NODELAY;
+NET sd_data<3> NODELAY;
+NET sd_data<4> NODELAY;
+NET sd_data<5> NODELAY;
+NET sd_data<6> NODELAY;
+NET sd_data<7> NODELAY;
+NET sd_data<8> NODELAY;
+NET sd_data<9> NODELAY;
+NET sd_data<10> NODELAY;
+NET sd_data<11> NODELAY;
+NET sd_data<12> NODELAY;
+NET sd_data<13> NODELAY;
+NET sd_data<14> NODELAY;
+NET sd_data<15> NODELAY;
+NET sd_data<16> NODELAY;
+NET sd_data<17> NODELAY;
+NET sd_data<18> NODELAY;
+NET sd_data<19> NODELAY;
+NET sd_data<20> NODELAY;
+NET sd_data<21> NODELAY;
+NET sd_data<22> NODELAY;
+NET sd_data<23> NODELAY;
+NET sd_data<24> NODELAY;
+NET sd_data<25> NODELAY;
+NET sd_data<26> NODELAY;
+NET sd_data<27> NODELAY;
+NET sd_data<28> NODELAY;
+NET sd_data<29> NODELAY;
+NET sd_data<30> NODELAY;
+NET sd_data<31> NODELAY;
+NET AD<0> NODELAY;
+NET AD<1> NODELAY;
+NET AD<2> NODELAY;
+NET AD<3> NODELAY;
+NET AD<4> NODELAY;
+NET AD<5> NODELAY;
+NET AD<6> NODELAY;
+NET AD<7> NODELAY;
+NET AD<8> NODELAY;
+NET AD<9> NODELAY;
+NET AD<10> NODELAY;
+NET AD<11> NODELAY;
+NET AD<12> NODELAY;
+NET AD<13> NODELAY;
+NET AD<14> NODELAY;
+NET AD<15> NODELAY;
+NET AD<16> NODELAY;
+NET AD<17> NODELAY;
+NET AD<18> NODELAY;
+NET AD<19> NODELAY;
+NET AD<20> NODELAY;
+NET AD<21> NODELAY;
+NET AD<22> NODELAY;
+NET AD<23> NODELAY;
+NET AD<24> NODELAY;
+NET AD<25> NODELAY;
+NET AD<26> NODELAY;
+NET AD<27> NODELAY;
+NET AD<28> NODELAY;
+NET AD<29> NODELAY;
+NET AD<30> NODELAY;
+NET AD<31> NODELAY;
+
+
+
