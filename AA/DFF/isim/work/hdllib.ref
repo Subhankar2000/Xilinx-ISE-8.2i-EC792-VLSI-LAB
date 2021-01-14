@@ -1,0 +1,4 @@
+EN dff NULL D:/Xilinx_projects/AA/DFF/DFF.vhd sub00/vhpl00 1610525365
+AR dff behavioral D:/Xilinx_projects/AA/DFF/DFF.vhd sub00/vhpl01 1610525366
+AR tb testbench_arch D:/Xilinx_projects/AA/DFF/tb.vhw sub00/vhpl03 1610525368
+EN tb NULL D:/Xilinx_projects/AA/DFF/tb.vhw sub00/vhpl02 1610525367
