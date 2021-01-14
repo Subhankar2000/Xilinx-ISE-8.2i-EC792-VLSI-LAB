@@ -1,4 +1,4 @@
-AR tb testbench_arch D:/Xilinx_projects/SK/E7_FADD/tb.vhw sub00/vhpl03 1610000460
-EN tb NULL D:/Xilinx_projects/SK/E7_FADD/tb.vhw sub00/vhpl02 1610000459
+AR tb testbench_arch D:/Xilinx_projects/SK/E7_FADD/tb.vhw sub00/vhpl03 1610538232
+EN tb NULL D:/Xilinx_projects/SK/E7_FADD/tb.vhw sub00/vhpl02 1610538231
 EN e7_fadd NULL D:/Xilinx_projects/SK/E7_FADD/E7_FADD.vhd sub00/vhpl00 1609957012
 AR e7_fadd behavioral D:/Xilinx_projects/SK/E7_FADD/E7_FADD.vhd sub00/vhpl01 1609957013

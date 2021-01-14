@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/SK/SR_FF/SR_FF.ise" -intstyle ise -ifn SR_FF.xst -ofn SR_FF.syr

@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/SK/E8_SRF/E8_SRF.ise" -intstyle ise -ifn E8_SRF.xst -ofn E8_SRF.syr

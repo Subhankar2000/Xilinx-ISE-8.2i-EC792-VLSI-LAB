@@ -5,10 +5,10 @@ EN work/E7_FADD 1609957012         FL D:/Xilinx_projects/SK/E7_FADD/E7_FADD.vhd 
       PB ieee/STD_LOGIC_UNSIGNED 1147840857
 AR work/E7_FADD/Behavioral 1609957013 FL D:/Xilinx_projects/SK/E7_FADD/E7_FADD.vhd \
       EN work/E7_FADD 1609957012
-FL D:/Xilinx_projects/SK/E7_FADD/tb.vhw 2021/01/07.11:50:54 I.31
-EN work/tb 1610000459              FL D:/Xilinx_projects/SK/E7_FADD/tb.vhw \
+FL D:/Xilinx_projects/SK/E7_FADD/tb.vhw 2021/01/13.17:13:47 I.31
+EN work/tb 1610538231              FL D:/Xilinx_projects/SK/E7_FADD/tb.vhw \
       PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
       PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
       PB std/textio 1147840824
-AR work/tb/testbench_arch 1610000460 FL D:/Xilinx_projects/SK/E7_FADD/tb.vhw EN work/tb 1610000459 \
+AR work/tb/testbench_arch 1610538232 FL D:/Xilinx_projects/SK/E7_FADD/tb.vhw EN work/tb 1610538231 \
       CP E7_FADD        PB ieee/STD_LOGIC_TEXTIO 1147840859
