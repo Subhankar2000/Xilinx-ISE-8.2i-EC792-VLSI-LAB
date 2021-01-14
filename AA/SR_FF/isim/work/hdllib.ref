@@ -1,4 +1,4 @@
-EN tb NULL D:/Xilinx_projects/AA/SR_FF/tb.vhw sub00/vhpl02 1609957926
-AR tb testbench_arch D:/Xilinx_projects/AA/SR_FF/tb.vhw sub00/vhpl03 1609957927
+EN tb NULL D:/Xilinx_projects/AA/SR_FF/tb.vhw sub00/vhpl02 1610463223
+AR tb testbench_arch D:/Xilinx_projects/AA/SR_FF/tb.vhw sub00/vhpl03 1610463224
 AR sr_ff behavioral D:/Xilinx_projects/AA/SR_FF/SR_FF.vhd sub00/vhpl01 1609957872
 EN sr_ff NULL D:/Xilinx_projects/AA/SR_FF/SR_FF.vhd sub00/vhpl00 1609957871

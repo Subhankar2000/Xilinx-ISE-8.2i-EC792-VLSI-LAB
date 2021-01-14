@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 8.2i
 --  \   \         Application : ISE
 --  /   /         Filename : tb.vhw
--- /___/   /\     Timestamp : Thu Jan 07 00:45:57 2021
+-- /___/   /\     Timestamp : Thu Jan 14 13:50:14 2021
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -40,7 +40,7 @@ ARCHITECTURE testbench_arch OF tb IS
         );
     END COMPONENT;
 
-    SIGNAL CLK : std_logic := '0';
+    SIGNAL CLK : std_logic := '1';
     SIGNAL S : std_logic := '0';
     SIGNAL R : std_logic := '0';
     SIGNAL Q : std_logic := '0';
@@ -63,65 +63,50 @@ ARCHITECTURE testbench_arch OF tb IS
             BEGIN
                 -- -------------  Current Time:  20ns
                 WAIT FOR 20 ns;
-                CLK <= '1';
+                CLK <= '0';
+                S <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  40ns
                 WAIT FOR 20 ns;
-                CLK <= '0';
-                S <= '1';
+                CLK <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  60ns
                 WAIT FOR 20 ns;
-                CLK <= '1';
+                CLK <= '0';
+                S <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  80ns
                 WAIT FOR 20 ns;
-                CLK <= '0';
-                S <= '0';
+                CLK <= '1';
+                R <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  100ns
                 WAIT FOR 20 ns;
-                CLK <= '1';
+                CLK <= '0';
+                R <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  120ns
                 WAIT FOR 20 ns;
-                CLK <= '0';
-                S <= '1';
+                CLK <= '1';
+                R <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  140ns
                 WAIT FOR 20 ns;
+                CLK <= '0';
+                R <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  160ns
+                WAIT FOR 20 ns;
                 CLK <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  200ns
-                WAIT FOR 60 ns;
                 S <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  240ns
-                WAIT FOR 40 ns;
-                S <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  280ns
-                WAIT FOR 40 ns;
-                S <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  320ns
-                WAIT FOR 40 ns;
-                R <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  440ns
-                WAIT FOR 120 ns;
-                R <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  520ns
-                WAIT FOR 80 ns;
-                S <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  600ns
-                WAIT FOR 80 ns;
+                -- -------------  Current Time:  180ns
+                WAIT FOR 20 ns;
+                CLK <= '0';
                 S <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  680ns
-                WAIT FOR 80 ns;
+                WAIT FOR 500 ns;
                 R <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  800ns
@@ -136,30 +121,13 @@ ARCHITECTURE testbench_arch OF tb IS
                 WAIT FOR 120 ns;
                 R <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  1100ns
-                WAIT FOR 60 ns;
-                R <= '1';
-                -- -------------------------------------
                 -- -------------  Current Time:  1160ns
-                WAIT FOR 60 ns;
+                WAIT FOR 120 ns;
                 R <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  1220ns
-                WAIT FOR 60 ns;
-                R <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  1280ns
-                WAIT FOR 60 ns;
+                WAIT FOR 120 ns;
                 R <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  1340ns
-                WAIT FOR 60 ns;
-                R <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  1400ns
-                WAIT FOR 60 ns;
-                R <= '0';
-                WAIT FOR 462600 ns;
 
                 IF (TX_ERROR = 0) THEN
                     STD.TEXTIO.write(TX_OUT, string'("No errors or warnings"));

@@ -2,15 +2,15 @@
    ./tb_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  55742
+     -ipcport  51562
 
-Thu Jan 07 00:40:00 2021
+Thu Jan 14 13:50:23 2021
 
-Total Line Count = 762
+Total Line Count = 733
 
- Elaboration time 0.015625 sec.
+ Elaboration time 0 sec.
 
- Estimate current memory usage 113.955 Meg. 
+ Estimate current memory usage 113.951 Meg. 
 
  Total signals 12
  Total nets 7
@@ -27,5 +27,3 @@ ntrace start
 run all 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-ERROR:Simulator:29 - at 560.000 ns(1000) : Iteration limit is reached. Possible
-   zero delay oscillation.
