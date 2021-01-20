@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 8.2i
 --  \   \         Application : ISE
 --  /   /         Filename : tb.vhw
--- /___/   /\     Timestamp : Wed Jan 13 13:39:16 2021
+-- /___/   /\     Timestamp : Tue Jan 19 18:57:02 2021
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -93,7 +93,7 @@ ARCHITECTURE testbench_arch OF tb IS
                 WAIT FOR 200 ns;
                 D <= '1';
                 -- -------------------------------------
-                WAIT FOR 315 ns;
+                WAIT FOR 415 ns;
 
                 IF (TX_ERROR = 0) THEN
                     STD.TEXTIO.write(TX_OUT, string'("No errors or warnings"));

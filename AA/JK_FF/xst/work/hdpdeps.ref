@@ -1,0 +1,5 @@
+V3 3
+FL D:/Xilinx_projects/AA/JK_FF/JKFF.vhd 2021/01/20.14:12:04 I.31
+EN work/JKFF 1611133634            FL D:/Xilinx_projects/AA/JK_FF/JKFF.vhd \
+      PB ieee/std_logic_1164 1147274808
+AR work/JKFF/Behavioral 1611133635 FL D:/Xilinx_projects/AA/JK_FF/JKFF.vhd EN work/JKFF 1611133634

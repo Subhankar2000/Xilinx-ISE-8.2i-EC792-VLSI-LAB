@@ -4,10 +4,10 @@ EN work/DFF 1610525365             FL D:/Xilinx_projects/AA/DFF/DFF.vhd \
       PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
       PB ieee/STD_LOGIC_UNSIGNED 1147840857
 AR work/DFF/Behavioral 1610525366  FL D:/Xilinx_projects/AA/DFF/DFF.vhd EN work/DFF 1610525365
-FL D:/Xilinx_projects/AA/DFF/tb.vhw 2021/01/13.13:39:17 I.31
-EN work/tb 1610525367              FL D:/Xilinx_projects/AA/DFF/tb.vhw \
+FL D:/Xilinx_projects/AA/DFF/tb.vhw 2021/01/19.18:57:02 I.31
+EN work/tb 1611062826              FL D:/Xilinx_projects/AA/DFF/tb.vhw \
       PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
       PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
       PB std/textio 1147840824
-AR work/tb/testbench_arch 1610525368 FL D:/Xilinx_projects/AA/DFF/tb.vhw EN work/tb 1610525367 \
+AR work/tb/testbench_arch 1611062827 FL D:/Xilinx_projects/AA/DFF/tb.vhw EN work/tb 1611062826 \
       CP DFF

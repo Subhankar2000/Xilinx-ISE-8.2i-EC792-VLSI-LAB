@@ -1,0 +1,4 @@
+AR e8a_sr behavioral D:/Xilinx_projects/SK/E8a_SR/E8a_SR.vhd sub00/vhpl01 1610717575
+EN e8a_sr NULL D:/Xilinx_projects/SK/E8a_SR/E8a_SR.vhd sub00/vhpl00 1610717574
+EN tb NULL D:/Xilinx_projects/SK/E8a_SR/tb.vhw sub00/vhpl02 1610717936
+AR tb testbench_arch D:/Xilinx_projects/SK/E8a_SR/tb.vhw sub00/vhpl03 1610717937

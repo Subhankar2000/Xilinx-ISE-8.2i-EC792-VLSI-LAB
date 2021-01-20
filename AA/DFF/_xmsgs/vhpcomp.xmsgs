@@ -5,4 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="info" file="Simulator" num="427" delta="unknown" >Not recompiling files in incremental mode, as all the files in <arg fmt="%s" index="1">tb_beh.prj</arg> are up to date.
+</msg>
+
 </messages>

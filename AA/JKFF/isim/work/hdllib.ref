@@ -1,0 +1,4 @@
+AR tb testbench_arch D:/Xilinx_projects/AA/JKFF/tb.vhw sub00/vhpl03 1611129258
+EN tb NULL D:/Xilinx_projects/AA/JKFF/tb.vhw sub00/vhpl02 1611129257
+EN jkff NULL D:/Xilinx_projects/AA/JKFF/JKFF.vhd sub00/vhpl00 1611129088
+AR jkff behavioral D:/Xilinx_projects/AA/JKFF/JKFF.vhd sub00/vhpl01 1611129089

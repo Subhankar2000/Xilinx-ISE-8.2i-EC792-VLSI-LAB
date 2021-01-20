@@ -2,15 +2,15 @@
    ./tb_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  54621
+     -ipcport  58068
 
-Wed Jan 13 17:13:55 2021
+Fri Jan 15 18:33:39 2021
 
 Total Line Count = 770
 
- Elaboration time 0.015625 sec.
+ Elaboration time 0 sec.
 
- Estimate current memory usage 113.959 Meg. 
+ Estimate current memory usage 114.156 Meg. 
 
  Total signals 10
  Total nets 5
@@ -27,3 +27,4 @@ ntrace start
 run all 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+ERROR:Portability:155 - Flushing buffer failed.
