@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">D:/Xilinx_projects/AA/JK_FF/JKFF.vhd</arg>&quot; line <arg fmt="%d" index="2">14</arg>: The following signals are missing in the process sensitivity list:
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">D:/Xilinx_projects/AA/JK_FF/JKFF.vhd</arg>&quot; line <arg fmt="%d" index="2">18</arg>: The following signals are missing in the process sensitivity list:
 <arg fmt="%s" index="3">Q_BAR</arg>.
 </msg>
 

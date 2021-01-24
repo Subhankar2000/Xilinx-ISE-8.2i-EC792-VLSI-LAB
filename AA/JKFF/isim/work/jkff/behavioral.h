@@ -24,7 +24,7 @@ public:
 
     HSim__s1 SE[5];
 
-    HSim__s1 SA[2];
+    HSim__s1 SA[4];
   char t0;
     Work_jkff_behavioral(const char * name);
     ~Work_jkff_behavioral();

@@ -1,0 +1,13 @@
+V3 7
+FL D:/Xilinx_projects/AA/E_JK/E_JK.vhd 2021/01/24.21:42:40 I.31
+EN work/E_JK 1611505125            FL D:/Xilinx_projects/AA/E_JK/E_JK.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/E_JK/Behavioral 1611505126 FL D:/Xilinx_projects/AA/E_JK/E_JK.vhd EN work/E_JK 1611505125
+FL D:/Xilinx_projects/AA/E_JK/tb.vhw 2021/01/24.21:48:35 I.31
+EN work/tb 1611505127              FL D:/Xilinx_projects/AA/E_JK/tb.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/tb/testbench_arch 1611505128 FL D:/Xilinx_projects/AA/E_JK/tb.vhw EN work/tb 1611505127 \
+      CP E_JK

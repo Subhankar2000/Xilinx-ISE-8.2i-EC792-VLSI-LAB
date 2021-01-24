@@ -10,11 +10,11 @@ CPU : 0.00 / 0.17 s | Elapsed : 0.00 / 0.00 s
 Compiling vhdl file "D:/Xilinx_projects/AA/JK_FF/JKFF.vhd" in Library work.
 Entity <jkff> compiled.
 Entity <jkff> (Architecture <behavioral>) compiled.
-CPU : 0.03 / 0.21 s | Elapsed : 0.00 / 0.00 s
+CPU : 0.03 / 0.20 s | Elapsed : 0.00 / 0.00 s
  
 --> 
 
-Total memory usage is 201164 kilobytes
+Total memory usage is 200588 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

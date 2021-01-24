@@ -1,13 +1,13 @@
 V3 7
-FL D:/Xilinx_projects/AA/JKFF/JKFF.vhd 2021/01/20.13:20:32 I.31
-EN work/JKFF 1611129088            FL D:/Xilinx_projects/AA/JKFF/JKFF.vhd \
+FL D:/Xilinx_projects/AA/JKFF/JKFF.vhd 2021/01/24.23:18:29 I.31
+EN work/JKFF 1611510515            FL D:/Xilinx_projects/AA/JKFF/JKFF.vhd \
       PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
       PB ieee/STD_LOGIC_UNSIGNED 1147840857
-AR work/JKFF/Behavioral 1611129089 FL D:/Xilinx_projects/AA/JKFF/JKFF.vhd EN work/JKFF 1611129088
-FL D:/Xilinx_projects/AA/JKFF/tb.vhw 2021/01/20.13:24:12 I.31
-EN work/tb 1611129257              FL D:/Xilinx_projects/AA/JKFF/tb.vhw \
+AR work/JKFF/Behavioral 1611510516 FL D:/Xilinx_projects/AA/JKFF/JKFF.vhd EN work/JKFF 1611510515
+FL D:/Xilinx_projects/AA/JKFF/tb.vhw 2021/01/24.23:08:17 I.31
+EN work/tb 1611510537              FL D:/Xilinx_projects/AA/JKFF/tb.vhw \
       PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
       PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
       PB std/textio 1147840824
-AR work/tb/testbench_arch 1611129258 FL D:/Xilinx_projects/AA/JKFF/tb.vhw EN work/tb 1611129257 \
+AR work/tb/testbench_arch 1611510538 FL D:/Xilinx_projects/AA/JKFF/tb.vhw EN work/tb 1611510537 \
       CP JKFF

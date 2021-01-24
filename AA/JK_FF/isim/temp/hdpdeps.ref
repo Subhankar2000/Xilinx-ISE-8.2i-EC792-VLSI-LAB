@@ -1,7 +1,6 @@
 V3 3
-FL D:/Xilinx_projects/AA/JK_FF/JKFF.vhd 2021/01/20.13:44:25 I.31
-EN isim_temp/JKFF 1611130532       FL D:/Xilinx_projects/AA/JK_FF/JKFF.vhd \
-      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
-      PB ieee/STD_LOGIC_UNSIGNED 1147840857
-AR isim_temp/JKFF/Behavioral 1611130533 FL D:/Xilinx_projects/AA/JK_FF/JKFF.vhd \
-      EN isim_temp/JKFF 1611130532
+FL D:/Xilinx_projects/AA/JK_FF/JKFF.vhd 2021/01/24.23:42:20 I.31
+EN isim_temp/JKFF 1611511943       FL D:/Xilinx_projects/AA/JK_FF/JKFF.vhd \
+      PB ieee/std_logic_1164 1147840849
+AR isim_temp/JKFF/Behavioral 1611511944 FL D:/Xilinx_projects/AA/JK_FF/JKFF.vhd \
+      EN isim_temp/JKFF 1611511943

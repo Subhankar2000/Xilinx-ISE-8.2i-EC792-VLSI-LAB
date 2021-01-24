@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 8.2i
 --  \   \         Application : ISE
 --  /   /         Filename : tb.vhw
--- /___/   /\     Timestamp : Wed Jan 20 13:59:36 2021
+-- /___/   /\     Timestamp : Sun Jan 24 23:35:37 2021
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -19,9 +19,9 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE STD.TEXTIO.ALL;
 
 ENTITY tb IS
@@ -91,7 +91,6 @@ ARCHITECTURE testbench_arch OF tb IS
                 -- -------------------------------------
                 -- -------------  Current Time:  685ns
                 WAIT FOR 200 ns;
-                J <= '1';
                 K <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  885ns
@@ -102,12 +101,10 @@ ARCHITECTURE testbench_arch OF tb IS
                 -- -------------  Current Time:  1085ns
                 WAIT FOR 200 ns;
                 J <= '1';
-                K <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  1285ns
                 WAIT FOR 200 ns;
                 J <= '0';
-                K <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  1485ns
                 WAIT FOR 200 ns;
@@ -115,9 +112,14 @@ ARCHITECTURE testbench_arch OF tb IS
                 -- -------------------------------------
                 -- -------------  Current Time:  1685ns
                 WAIT FOR 200 ns;
-                J <= '1';
+                K <= '0';
                 -- -------------------------------------
-                WAIT FOR 1515 ns;
+                -- -------------  Current Time:  1885ns
+                WAIT FOR 200 ns;
+                J <= '1';
+                K <= '1';
+                -- -------------------------------------
+                WAIT FOR 1315 ns;
 
                 IF (TX_ERROR = 0) THEN
                     STD.TEXTIO.write(TX_OUT, string'("No errors or warnings"));

@@ -7,4 +7,6 @@
 <messages>
 <msg type="warning" file="Xst" num="2170" delta="unknown" >Unit <arg fmt="%s" index="1">JKFF</arg> : the following signal(s) form a combinatorial loop: </msg>
 
+<msg type="warning" file="Xst" num="2170" delta="unknown" >Unit <arg fmt="%s" index="1">JKFF</arg> : the following signal(s) form a combinatorial loop: </msg>
+
 </messages>
