@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/SK/E8c_JK/E8c_JK.ise" -intstyle ise -ifn E8c_JK.xst -ofn E8c_JK.syr

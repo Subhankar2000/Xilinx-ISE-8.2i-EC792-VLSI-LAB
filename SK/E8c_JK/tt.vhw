@@ -1,0 +1,134 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2007 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 9.2i
+--  \   \         Application : ISE
+--  /   /         Filename : tt.vhw
+-- /___/   /\     Timestamp : Thu Jan 28 15:25:59 2021
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: tt
+--Device: Xilinx
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY tt IS
+END tt;
+
+ARCHITECTURE testbench_arch OF tt IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "results.txt";
+
+    COMPONENT E8c_JK
+        PORT (
+            CLK : In std_logic;
+            J : In std_logic;
+            K : In std_logic;
+            Q : InOut std_logic;
+            Q_BAR : InOut std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL CLK : std_logic := '0';
+    SIGNAL J : std_logic := '0';
+    SIGNAL K : std_logic := '0';
+    SIGNAL Q : std_logic := 'Z';
+    SIGNAL Q_BAR : std_logic := 'Z';
+
+    constant PERIOD : time := 50 ns;
+    constant DUTY_CYCLE : real := 0.5;
+    constant OFFSET : time := 0 ns;
+
+    BEGIN
+        UUT : E8c_JK
+        PORT MAP (
+            CLK => CLK,
+            J => J,
+            K => K,
+            Q => Q,
+            Q_BAR => Q_BAR
+        );
+
+        PROCESS    -- clock process for CLK
+        BEGIN
+            WAIT for OFFSET;
+            CLOCK_LOOP : LOOP
+                CLK <= '0';
+                WAIT FOR (PERIOD - (PERIOD * DUTY_CYCLE));
+                CLK <= '1';
+                WAIT FOR (PERIOD * DUTY_CYCLE);
+            END LOOP CLOCK_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  20ns
+                WAIT FOR 20 ns;
+                J <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  70ns
+                WAIT FOR 50 ns;
+                J <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  120ns
+                WAIT FOR 50 ns;
+                K <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  170ns
+                WAIT FOR 50 ns;
+                K <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  220ns
+                WAIT FOR 50 ns;
+                J <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  270ns
+                WAIT FOR 50 ns;
+                J <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  320ns
+                WAIT FOR 50 ns;
+                J <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  370ns
+                WAIT FOR 50 ns;
+                J <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  420ns
+                WAIT FOR 50 ns;
+                K <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  470ns
+                WAIT FOR 50 ns;
+                K <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  520ns
+                WAIT FOR 50 ns;
+                K <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  570ns
+                WAIT FOR 50 ns;
+                K <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  620ns
+                WAIT FOR 50 ns;
+                J <= '1';
+                K <= '1';
+                -- -------------------------------------
+                WAIT FOR 430 ns;
+
+            END PROCESS;
+
+    END testbench_arch;
+
