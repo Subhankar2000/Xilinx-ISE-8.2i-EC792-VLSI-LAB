@@ -1,0 +1,3 @@
+MODULE tb
+SUBMODULE counter
+INSTANCE UUT

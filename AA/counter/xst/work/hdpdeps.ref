@@ -1,0 +1,7 @@
+V3 3
+FL D:/Xilinx_projects/AA/counter/counter.vhd 2021/02/01.20:13:48 I.31
+EN work/counter 1612190734         FL D:/Xilinx_projects/AA/counter/counter.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814
+AR work/counter/Behavioral 1612190735 FL D:/Xilinx_projects/AA/counter/counter.vhd \
+      EN work/counter 1612190734

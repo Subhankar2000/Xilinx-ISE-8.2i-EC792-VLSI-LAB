@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/AA/counter/counter.ise" -intstyle ise -ifn counter.xst -ofn counter.syr

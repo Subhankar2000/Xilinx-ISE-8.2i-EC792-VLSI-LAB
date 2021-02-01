@@ -1,0 +1,14 @@
+V3 7
+FL D:/Xilinx_projects/AA/counter/tb.vhw 2021/02/01.20:23:23 I.31
+EN work/tb 1612191207              FL D:/Xilinx_projects/AA/counter/tb.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/tb/testbench_arch 1612191208 FL D:/Xilinx_projects/AA/counter/tb.vhw EN work/tb 1612191207 \
+      CP counter
+FL D:/Xilinx_projects/AA/counter/counter.vhd 2021/02/01.20:21:44 I.31
+EN work/counter 1612191133         FL D:/Xilinx_projects/AA/counter/counter.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/counter/Behavioral 1612191134 FL D:/Xilinx_projects/AA/counter/counter.vhd \
+      EN work/counter 1612191133

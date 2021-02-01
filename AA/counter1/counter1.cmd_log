@@ -1,0 +1,2 @@
+xst -ise "D:/Xilinx_projects/AA/counter1/counter1.ise" -intstyle ise -ifn counter1.xst -ofn counter1.syr
+xst -ise "D:/Xilinx_projects/AA/counter1/counter1.ise" -intstyle ise -ifn counter1.xst -ofn counter1.syr
