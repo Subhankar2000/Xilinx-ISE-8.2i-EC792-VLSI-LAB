@@ -1,0 +1,2 @@
+vhdl work "ucounter.vhd"
+vhdl work "tb.vhw"

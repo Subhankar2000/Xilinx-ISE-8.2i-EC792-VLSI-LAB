@@ -1,0 +1,4 @@
+AR tb testbench_arch D:/Xilinx_projects/SK/count8/tb.vhw sub00/vhpl03 1612196773
+EN tb NULL D:/Xilinx_projects/SK/count8/tb.vhw sub00/vhpl02 1612196772
+EN count8 NULL D:/Xilinx_projects/SK/count8/count8.vhd sub00/vhpl00 1612196731
+AR count8 behavioral D:/Xilinx_projects/SK/count8/count8.vhd sub00/vhpl01 1612196732

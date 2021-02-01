@@ -1,0 +1,4 @@
+EN tb NULL D:/Xilinx_projects/SK/dcounter/tb.vhw sub00/vhpl02 1612195877
+AR tb testbench_arch D:/Xilinx_projects/SK/dcounter/tb.vhw sub00/vhpl03 1612195878
+EN dcounter NULL D:/Xilinx_projects/SK/dcounter/dcounter.vhd sub00/vhpl00 1612195875
+AR dcounter behavioral D:/Xilinx_projects/SK/dcounter/dcounter.vhd sub00/vhpl01 1612195876

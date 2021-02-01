@@ -1,0 +1,4 @@
+EN ucounter NULL D:/Xilinx_projects/SK/ucounter/ucounter.vhd sub00/vhpl00 1612195271
+AR tb testbench_arch D:/Xilinx_projects/SK/ucounter/tb.vhw sub00/vhpl03 1612195342
+EN tb NULL D:/Xilinx_projects/SK/ucounter/tb.vhw sub00/vhpl02 1612195341
+AR ucounter behavioral D:/Xilinx_projects/SK/ucounter/ucounter.vhd sub00/vhpl01 1612195272

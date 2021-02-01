@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/SK/count8/count8.ise" -intstyle ise -ifn count8.xst -ofn count8.syr
