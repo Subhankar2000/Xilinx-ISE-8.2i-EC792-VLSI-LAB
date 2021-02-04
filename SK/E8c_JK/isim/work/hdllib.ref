@@ -1,6 +1,4 @@
-AR tt testbench_arch D:/Xilinx_projects/SK/E8c_JK/tt.vhw sub00/vhpl05 1611827778
-AR e8c_jk behavioral D:/Xilinx_projects/SK/E8c_JK/E8c_JK.vhd sub00/vhpl01 1612120371
-EN e8c_jk NULL D:/Xilinx_projects/SK/E8c_JK/E8c_JK.vhd sub00/vhpl00 1612120370
-AR tb testbench_arch D:/Xilinx_projects/SK/E8c_JK/tb.vhw sub00/vhpl03 1612120373
-EN tb NULL D:/Xilinx_projects/SK/E8c_JK/tb.vhw sub00/vhpl02 1612120372
-EN tt NULL D:/Xilinx_projects/SK/E8c_JK/tt.vhw sub00/vhpl04 1611827777
+AR e8c_jk behavioral D:/Xilinx_projects/SK/E8c_JK/E8c_JK.vhd sub00/vhpl01 1612416769
+EN e8c_jk NULL D:/Xilinx_projects/SK/E8c_JK/E8c_JK.vhd sub00/vhpl00 1612416768
+AR tb testbench_arch D:/Xilinx_projects/SK/E8c_JK/tb.vhw sub00/vhpl03 1612416771
+EN tb NULL D:/Xilinx_projects/SK/E8c_JK/tb.vhw sub00/vhpl02 1612416770

@@ -1,0 +1,164 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2003 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 8.2i
+--  \   \         Application : ISE
+--  /   /         Filename : tb.ant
+-- /___/   /\     Timestamp : Wed Feb 03 13:51:49 2021
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: tb
+--Device: Xilinx
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY tb IS
+END tb;
+
+ARCHITECTURE testbench_arch OF tb IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "D:\Xilinx_projects\AA\SISO\tb.ano";
+
+    COMPONENT SISO
+        PORT (
+            SI : In std_logic;
+            CLK : In std_logic;
+            SO : Out std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL SI : std_logic := '0';
+    SIGNAL CLK : std_logic := '0';
+    SIGNAL SO : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    constant PERIOD : time := 200 ns;
+    constant DUTY_CYCLE : real := 0.5;
+    constant OFFSET : time := 0 ns;
+
+    BEGIN
+        UUT : SISO
+        PORT MAP (
+            SI => SI,
+            CLK => CLK,
+            SO => SO
+        );
+
+        PROCESS    -- clock process for CLK
+        BEGIN
+            WAIT for OFFSET;
+            CLOCK_LOOP : LOOP
+                CLK <= '0';
+                WAIT FOR (PERIOD - (PERIOD * DUTY_CYCLE));
+                CLK <= '1';
+                WAIT FOR (PERIOD * DUTY_CYCLE);
+            END LOOP CLOCK_LOOP;
+        END PROCESS;
+
+        PROCESS    -- Annotation process for CLK
+            VARIABLE TX_TIME : INTEGER := 0;
+
+            PROCEDURE ANNOTATE_SO(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", SO, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, SO);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+        BEGIN
+            WAIT for 1 fs;
+            ANNOTATE_SO(0);
+            WAIT for OFFSET;
+            TX_TIME := TX_TIME + 0;
+            ANNO_LOOP : LOOP
+                --Rising Edge
+                WAIT for 115 ns;
+                TX_TIME := TX_TIME + 115;
+                ANNOTATE_SO(TX_TIME);
+                WAIT for 85 ns;
+                TX_TIME := TX_TIME + 85;
+            END LOOP ANNO_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  85ns
+                WAIT FOR 85 ns;
+                SI <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  285ns
+                WAIT FOR 200 ns;
+                SI <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  485ns
+                WAIT FOR 200 ns;
+                SI <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  685ns
+                WAIT FOR 200 ns;
+                SI <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  885ns
+                WAIT FOR 200 ns;
+                SI <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1485ns
+                WAIT FOR 600 ns;
+                SI <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1885ns
+                WAIT FOR 400 ns;
+                SI <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2085ns
+                WAIT FOR 200 ns;
+                SI <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  3085ns
+                WAIT FOR 1000 ns;
+                SI <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  3285ns
+                WAIT FOR 200 ns;
+                SI <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  3485ns
+                WAIT FOR 200 ns;
+                SI <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  3885ns
+                WAIT FOR 400 ns;
+                SI <= '0';
+                -- -------------------------------------
+                WAIT FOR 1315 ns;
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+

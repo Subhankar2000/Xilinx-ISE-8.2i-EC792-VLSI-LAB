@@ -1,0 +1,4 @@
+AR pipo behavioral D:/Xilinx_projects/AA/pipo/pipo.vhd sub00/vhpl01 1612340686
+AR tb testbench_arch D:/Xilinx_projects/AA/pipo/tb.vhw sub00/vhpl03 1612340688
+EN tb NULL D:/Xilinx_projects/AA/pipo/tb.vhw sub00/vhpl02 1612340687
+EN pipo NULL D:/Xilinx_projects/AA/pipo/pipo.vhd sub00/vhpl00 1612340685

@@ -1,0 +1,13 @@
+V3 7
+FL D:/Xilinx_projects/AA/pipo/tb.vhw 2021/02/03.13:54:41 I.31
+EN work/tb 1612340687              FL D:/Xilinx_projects/AA/pipo/tb.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/tb/testbench_arch 1612340688 FL D:/Xilinx_projects/AA/pipo/tb.vhw EN work/tb 1612340687 \
+      CP pipo           PB ieee/STD_LOGIC_TEXTIO 1147840859
+FL D:/Xilinx_projects/AA/pipo/pipo.vhd 2021/02/03.13:16:47 I.31
+EN work/pipo 1612340685            FL D:/Xilinx_projects/AA/pipo/pipo.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/pipo/Behavioral 1612340686 FL D:/Xilinx_projects/AA/pipo/pipo.vhd EN work/pipo 1612340685

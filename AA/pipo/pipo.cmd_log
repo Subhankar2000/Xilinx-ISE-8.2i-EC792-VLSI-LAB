@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/AA/pipo/pipo.ise" -intstyle ise -ifn pipo.xst -ofn pipo.syr

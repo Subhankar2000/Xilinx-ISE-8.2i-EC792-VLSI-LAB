@@ -7,7 +7,7 @@ entity ucounter is
     Port ( CLK : in  STD_LOGIC;
            RST : in  STD_LOGIC;
            Q : inout  STD_LOGIC_VECTOR (3 downto 0)
-		    );
+		  );
 end ucounter;
 
 architecture Behavioral of ucounter is

@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 8.2i
 --  \   \         Application : ISE
 --  /   /         Filename : tb.vhw
--- /___/   /\     Timestamp : Mon Feb 01 00:42:44 2021
+-- /___/   /\     Timestamp : Thu Feb 04 11:02:40 2021
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -78,27 +78,27 @@ ARCHITECTURE testbench_arch OF tb IS
             BEGIN
                 -- -------------  Current Time:  85ns
                 WAIT FOR 85 ns;
-                J <= '1';
+                K <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  285ns
                 WAIT FOR 200 ns;
-                J <= '0';
+                K <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  485ns
                 WAIT FOR 200 ns;
-                K <= '1';
+                J <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  685ns
                 WAIT FOR 200 ns;
-                K <= '0';
+                J <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  885ns
                 WAIT FOR 200 ns;
-                J <= '1';
+                K <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  1085ns
                 WAIT FOR 200 ns;
-                J <= '0';
+                K <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  1285ns
                 WAIT FOR 200 ns;
@@ -110,26 +110,31 @@ ARCHITECTURE testbench_arch OF tb IS
                 -- -------------------------------------
                 -- -------------  Current Time:  1685ns
                 WAIT FOR 200 ns;
-                K <= '1';
+                J <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  1885ns
                 WAIT FOR 200 ns;
-                K <= '0';
+                J <= '0';
+                K <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  2085ns
                 WAIT FOR 200 ns;
-                K <= '1';
+                K <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  2285ns
                 WAIT FOR 200 ns;
-                K <= '0';
+                K <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  2485ns
+                WAIT FOR 200 ns;
+                K <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2685ns
                 WAIT FOR 200 ns;
                 J <= '1';
                 K <= '1';
                 -- -------------------------------------
-                WAIT FOR 965 ns;
+                WAIT FOR 1115 ns;
 
                 IF (TX_ERROR = 0) THEN
                     STD.TEXTIO.write(TX_OUT, string'("No errors or warnings"));
