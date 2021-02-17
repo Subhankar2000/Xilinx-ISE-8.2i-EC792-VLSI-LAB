@@ -2,9 +2,9 @@
    ./tb_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  52633
+     -ipcport  50307
 
-Thu Jan 21 14:05:04 2021
+Thu Feb 04 10:56:53 2021
 
 Total Line Count = 713
 

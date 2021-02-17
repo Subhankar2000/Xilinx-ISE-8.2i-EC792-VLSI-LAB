@@ -18,6 +18,11 @@ architecture Behavioral of DF_B is
 			then
 			Q <= D;
 			Q_BAR <= not D;
+		
+		else
+			Q <= Q ;
+			Q_BAR <= Q_BAR ;
+			
 		end if;
 	end process;
 end Behavioral;

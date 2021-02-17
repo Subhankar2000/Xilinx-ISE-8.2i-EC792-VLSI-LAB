@@ -1,0 +1,3 @@
+MODULE tb
+SUBMODULE siso_reg
+INSTANCE UUT

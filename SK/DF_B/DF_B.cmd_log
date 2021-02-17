@@ -1,1 +1,3 @@
 xst -ise "D:/Xilinx_projects/SK/DF_B/DF_B.ise" -intstyle ise -ifn DF_B.xst -ofn DF_B.syr
+xst -ise "D:/Xilinx_projects/SK/DF_B/DF_B.ise" -intstyle ise -ifn DF_B.xst -ofn DF_B.syr
+xst -ise "D:/Xilinx_projects/SK/DF_B/DF_B.ise" -intstyle ise -ifn DF_B.xst -ofn DF_B.syr

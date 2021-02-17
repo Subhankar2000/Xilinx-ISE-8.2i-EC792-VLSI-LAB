@@ -1,0 +1,14 @@
+V3 7
+FL D:/Xilinx_projects/SK/siso_reg/siso_reg.vhd 2021/02/17.22:38:21 I.31
+EN work/siso_reg 1613582188        FL D:/Xilinx_projects/SK/siso_reg/siso_reg.vhd \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/siso_reg/Behavioral 1613582189 FL D:/Xilinx_projects/SK/siso_reg/siso_reg.vhd \
+      EN work/siso_reg 1613582188
+FL D:/Xilinx_projects/SK/siso_reg/tb.vhw 2021/02/17.23:49:18 I.31
+EN work/tb 1613586130              FL D:/Xilinx_projects/SK/siso_reg/tb.vhw \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/tb/testbench_arch 1613586131 FL D:/Xilinx_projects/SK/siso_reg/tb.vhw EN work/tb 1613586130 \
+      CP siso_reg       PB ieee/STD_LOGIC_TEXTIO 1147840859

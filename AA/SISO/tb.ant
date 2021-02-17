@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 8.2i
 --  \   \         Application : ISE
 --  /   /         Filename : tb.ant
--- /___/   /\     Timestamp : Wed Feb 03 13:51:49 2021
+-- /___/   /\     Timestamp : Wed Feb 10 10:34:35 2021
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -19,9 +19,9 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE STD.TEXTIO.ALL;
 
 ENTITY tb IS
@@ -115,43 +115,35 @@ ARCHITECTURE testbench_arch OF tb IS
                 WAIT FOR 200 ns;
                 SI <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  685ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  885ns
+                WAIT FOR 400 ns;
                 SI <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  885ns
+                -- -------------  Current Time:  1085ns
                 WAIT FOR 200 ns;
                 SI <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  1485ns
+                -- -------------  Current Time:  1685ns
                 WAIT FOR 600 ns;
                 SI <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  1885ns
-                WAIT FOR 400 ns;
+                -- -------------  Current Time:  2485ns
+                WAIT FOR 800 ns;
                 SI <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  2085ns
+                -- -------------  Current Time:  2685ns
                 WAIT FOR 200 ns;
                 SI <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  3085ns
-                WAIT FOR 1000 ns;
-                SI <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  3285ns
-                WAIT FOR 200 ns;
-                SI <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  3485ns
+                -- -------------  Current Time:  2885ns
                 WAIT FOR 200 ns;
                 SI <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  3885ns
-                WAIT FOR 400 ns;
+                -- -------------  Current Time:  3685ns
+                WAIT FOR 800 ns;
                 SI <= '0';
                 -- -------------------------------------
-                WAIT FOR 1315 ns;
+                WAIT FOR 1515 ns;
 
                 STD.TEXTIO.write(TX_OUT, string'("Total[]"));
                 STD.TEXTIO.writeline(RESULTS, TX_OUT);

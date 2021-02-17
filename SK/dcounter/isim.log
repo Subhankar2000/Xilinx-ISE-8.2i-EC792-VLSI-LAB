@@ -2,13 +2,13 @@
    ./tb_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  50499
+     -ipcport  58850
 
-Thu Feb 04 11:05:06 2021
+Sat Feb 13 08:33:58 2021
 
 Total Line Count = 703
 
- Elaboration time 0 sec.
+ Elaboration time 0.015625 sec.
 
  Estimate current memory usage 113.951 Meg. 
 

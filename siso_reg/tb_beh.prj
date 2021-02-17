@@ -1,0 +1,2 @@
+vhdl work "siso_reg.vhd"
+vhdl work "tb.vhw"

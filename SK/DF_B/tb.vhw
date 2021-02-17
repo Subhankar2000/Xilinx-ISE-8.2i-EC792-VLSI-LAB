@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 8.2i
 --  \   \         Application : ISE
 --  /   /         Filename : tb.vhw
--- /___/   /\     Timestamp : Thu Jan 21 14:00:31 2021
+-- /___/   /\     Timestamp : Thu Jan 21 14:13:43 2021
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -81,12 +81,8 @@ ARCHITECTURE testbench_arch OF tb IS
                 WAIT FOR 200 ns;
                 D <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  485ns
-                WAIT FOR 200 ns;
-                D <= '1';
-                -- -------------------------------------
                 -- -------------  Current Time:  685ns
-                WAIT FOR 200 ns;
+                WAIT FOR 400 ns;
                 D <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  885ns

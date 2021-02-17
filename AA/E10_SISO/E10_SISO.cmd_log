@@ -1,0 +1,1 @@
+xst -ise "D:/Xilinx_projects/AA/E10_SISO/E10_SISO.ise" -intstyle ise -ifn E10_SISO.xst -ofn E10_SISO.syr

@@ -5,10 +5,10 @@ EN work/ucounter 1612416865        FL D:/Xilinx_projects/SK/ucounter/ucounter.vh
       PB ieee/STD_LOGIC_UNSIGNED 1147840857
 AR work/ucounter/Behavioral 1612416866 FL D:/Xilinx_projects/SK/ucounter/ucounter.vhd \
       EN work/ucounter 1612416865
-FL D:/Xilinx_projects/SK/ucounter/tb.vhw 2021/02/04.11:04:36 I.31
-EN work/tb 1612416881              FL D:/Xilinx_projects/SK/ucounter/tb.vhw \
+FL D:/Xilinx_projects/SK/ucounter/tb.vhw 2021/02/11.13:08:01 I.31
+EN work/tb 1613029087              FL D:/Xilinx_projects/SK/ucounter/tb.vhw \
       PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
       PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
       PB std/textio 1147840824
-AR work/tb/testbench_arch 1612416882 FL D:/Xilinx_projects/SK/ucounter/tb.vhw EN work/tb 1612416881 \
+AR work/tb/testbench_arch 1613029088 FL D:/Xilinx_projects/SK/ucounter/tb.vhw EN work/tb 1613029087 \
       CP ucounter

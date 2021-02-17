@@ -1,0 +1,4 @@
+AR siso_reg behavioral D:/Xilinx_projects/SK/siso_reg/siso_reg.vhd sub00/vhpl01 1613582189
+AR tb testbench_arch D:/Xilinx_projects/SK/siso_reg/tb.vhw sub00/vhpl03 1613582191
+EN tb NULL D:/Xilinx_projects/SK/siso_reg/tb.vhw sub00/vhpl02 1613582190
+EN siso_reg NULL D:/Xilinx_projects/SK/siso_reg/siso_reg.vhd sub00/vhpl00 1613582188
